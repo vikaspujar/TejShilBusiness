@@ -1,0 +1,875 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Rollio Kitchen — Premium silicone kitchen essentials designed for everyday Indian cooking. Timeless tools for modern homes.">
+  <meta name="theme-color" content="#1E1A18">
+  <meta property="og:title" content="Rollio Kitchen">
+  <meta property="og:description" content="Where tradition meets effortless cooking. Premium silicone kitchen essentials for everyday Indian cooking.">
+  <meta property="og:type" content="website">
+  <title>Rollio Kitchen — Premium Silicone Kitchen Essentials</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;1,400&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
+
+  <style>
+    /* ─── RESET ─── */
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; }
+
+    /* ─── TOKENS ─── */
+    :root {
+      --cream:       #FAF7F2;
+      --cream-mid:   #EDE7DC;
+      --cream-dark:  #E0D8CC;
+      --charcoal:    #1E1A18;
+      --charcoal-2:  #3A3028;
+      --charcoal-3:  #6B5D55;
+      --walnut:      #7A5C3A;
+      --walnut-2:    #B8834A;
+      --gold:        #C4903A;
+      --white:       #FFFFFF;
+
+      --serif: 'Playfair Display', Georgia, serif;
+      --sans:  'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+      --ease:  cubic-bezier(0.16, 1, 0.3, 1);
+      --max:   1160px;
+    }
+
+    /* ─── BASE ─── */
+    body {
+      font-family: var(--sans);
+      background: var(--cream);
+      color: var(--charcoal-2);
+      line-height: 1.7;
+      overflow-x: hidden;
+      -webkit-font-smoothing: antialiased;
+    }
+    img  { display: block; max-width: 100%; }
+    a    { text-decoration: none; color: inherit; }
+
+    /* ─── UTILITIES ─── */
+    .container { max-width: var(--max); margin: 0 auto; }
+    .label {
+      display: block;
+      font-size: 11px;
+      font-weight: 500;
+      letter-spacing: 0.22em;
+      text-transform: uppercase;
+      color: var(--gold);
+      margin-bottom: 14px;
+    }
+    .section-title {
+      font-family: var(--serif);
+      font-size: clamp(30px, 4vw, 50px);
+      font-weight: 400;
+      line-height: 1.15;
+      letter-spacing: -0.01em;
+    }
+
+    /* ─── FADE ANIMATION ─── */
+    .fade {
+      opacity: 0;
+      transform: translateY(28px);
+      transition: opacity 0.75s var(--ease), transform 0.75s var(--ease);
+    }
+    .fade.visible          { opacity: 1; transform: none; }
+    .fade.d1               { transition-delay: 0.10s; }
+    .fade.d2               { transition-delay: 0.20s; }
+    .fade.d3               { transition-delay: 0.30s; }
+    .fade.d4               { transition-delay: 0.40s; }
+
+    /* ─── BUTTONS ─── */
+    .btn {
+      display: inline-block;
+      padding: 15px 38px;
+      font-size: 12px;
+      font-weight: 500;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      transition: all 0.3s;
+      cursor: pointer;
+    }
+    .btn-gold   { background: var(--gold);    color: var(--white); border: 1px solid var(--gold); }
+    .btn-gold:hover { background: var(--walnut-2); border-color: var(--walnut-2); transform: translateY(-1px); }
+    .btn-ghost  { border: 1px solid rgba(255,255,255,0.45); color: var(--white); }
+    .btn-ghost:hover { background: rgba(255,255,255,0.1); border-color: var(--white); }
+    .btn-dark   { background: var(--charcoal); color: var(--white); border: 1px solid var(--charcoal); font-family: var(--sans); }
+    .btn-dark:hover { background: var(--charcoal-2); }
+    .btn-outline { border: 1px solid var(--charcoal-2); color: var(--charcoal-2); }
+    .btn-outline:hover { background: var(--charcoal); color: var(--white); }
+
+    /* ══════════════════════════════
+       NAV
+    ══════════════════════════════ */
+    #nav {
+      position: fixed;
+      top: 0; width: 100%;
+      z-index: 100;
+      padding: 26px 52px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      transition: background 0.4s var(--ease), padding 0.4s var(--ease), box-shadow 0.4s;
+    }
+    #nav.scrolled {
+      background: rgba(250, 247, 242, 0.96);
+      padding: 16px 52px;
+      backdrop-filter: blur(10px);
+      box-shadow: 0 1px 0 var(--cream-dark);
+    }
+    .nav-logo {
+      font-family: var(--serif);
+      font-size: 21px;
+      font-weight: 500;
+      color: var(--white);
+      letter-spacing: 0.02em;
+      transition: color 0.4s;
+    }
+    #nav.scrolled .nav-logo { color: var(--charcoal); }
+
+    .nav-links {
+      display: flex; gap: 40px; list-style: none;
+    }
+    .nav-links a {
+      font-size: 12px;
+      font-weight: 400;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      color: rgba(255,255,255,0.8);
+      transition: color 0.3s;
+    }
+    #nav.scrolled .nav-links a { color: var(--charcoal-3); }
+    .nav-links a:hover, #nav.scrolled .nav-links a:hover { color: var(--gold) !important; }
+
+    .nav-shop {
+      font-size: 12px;
+      font-weight: 500;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      padding: 10px 26px;
+      border: 1px solid rgba(255,255,255,0.45);
+      color: var(--white);
+      transition: all 0.3s;
+    }
+    #nav.scrolled .nav-shop { border-color: var(--charcoal-2); color: var(--charcoal-2); }
+    .nav-shop:hover { background: var(--gold) !important; border-color: var(--gold) !important; color: var(--white) !important; }
+
+    /* ══════════════════════════════
+       HERO
+    ══════════════════════════════ */
+    #hero {
+      position: relative;
+      height: 100vh;
+      min-height: 680px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      overflow: hidden;
+    }
+    .hero-bg {
+      position: absolute; inset: 0;
+      /* Warm dark kitchen fallback; Unsplash image loads on top */
+      background-color: #1E1208;
+      background-image: url('https://images.unsplash.com/photo-1556909114-f6e7ad7d3136?auto=format&fit=crop&w=1920&q=82');
+      background-size: cover;
+      background-position: center;
+      transform: scale(1.06);
+      transition: transform 7s ease-out;
+    }
+    .hero-bg.ready { transform: scale(1); }
+    .hero-overlay {
+      position: absolute; inset: 0;
+      background: linear-gradient(
+        to bottom,
+        rgba(18,11,7,0.52) 0%,
+        rgba(18,11,7,0.40) 45%,
+        rgba(18,11,7,0.68) 100%
+      );
+    }
+    .hero-content {
+      position: relative; z-index: 2;
+      max-width: 820px;
+      padding: 0 24px;
+    }
+    .hero-eyebrow {
+      font-size: 11px;
+      font-weight: 500;
+      letter-spacing: 0.22em;
+      text-transform: uppercase;
+      color: var(--gold);
+      margin-bottom: 22px;
+      opacity: 0;
+      transform: translateY(14px);
+      transition: all 0.8s var(--ease) 0.2s;
+    }
+    .hero-content h1 {
+      font-family: var(--serif);
+      font-size: clamp(40px, 6.5vw, 78px);
+      font-weight: 400;
+      line-height: 1.1;
+      color: var(--white);
+      letter-spacing: -0.025em;
+      margin-bottom: 22px;
+      opacity: 0;
+      transform: translateY(22px);
+      transition: all 0.9s var(--ease) 0.35s;
+    }
+    .hero-content .hero-p {
+      font-size: clamp(16px, 2vw, 19px);
+      font-weight: 300;
+      color: rgba(255,255,255,0.80);
+      max-width: 520px;
+      margin: 0 auto 10px;
+      line-height: 1.65;
+      opacity: 0;
+      transform: translateY(18px);
+      transition: all 0.85s var(--ease) 0.5s;
+    }
+    .hero-content .hero-sub {
+      font-size: 13px;
+      color: rgba(255,255,255,0.55);
+      letter-spacing: 0.1em;
+      margin-bottom: 42px;
+    }
+    .hero-btns {
+      display: inline-flex;
+      gap: 16px;
+      flex-wrap: wrap;
+      justify-content: center;
+      opacity: 0;
+      transform: translateY(14px);
+      transition: all 0.8s var(--ease) 0.65s;
+    }
+    /* trigger entrance */
+    #hero.go .hero-eyebrow,
+    #hero.go .hero-content h1,
+    #hero.go .hero-content .hero-p,
+    #hero.go .hero-btns {
+      opacity: 1;
+      transform: none;
+    }
+    .scroll-hint {
+      position: absolute; bottom: 38px; left: 50%;
+      transform: translateX(-50%);
+      display: flex; flex-direction: column; align-items: center; gap: 8px;
+      color: rgba(255,255,255,0.4);
+      font-size: 10px; letter-spacing: 0.18em; text-transform: uppercase;
+      z-index: 2;
+      animation: bounce 2.4s ease-in-out infinite;
+    }
+    .scroll-hint-line { width: 1px; height: 36px; background: rgba(255,255,255,0.25); }
+    @keyframes bounce {
+      0%,100% { transform: translateX(-50%) translateY(0); }
+      50%      { transform: translateX(-50%) translateY(7px); }
+    }
+
+    /* ══════════════════════════════
+       SECTION: PERFECT FOR
+    ══════════════════════════════ */
+    #perfect-for {
+      padding: 110px 52px;
+      background: var(--cream);
+      text-align: center;
+    }
+    #perfect-for .section-title { color: var(--charcoal); margin-bottom: 14px; }
+    #perfect-for .intro {
+      font-size: 17px;
+      color: var(--charcoal-3);
+      max-width: 480px;
+      margin: 0 auto 64px;
+    }
+
+    .use-grid {
+      display: grid;
+      grid-template-columns: repeat(5, 1fr);
+      gap: 2px;
+      background: var(--cream-dark);
+      border: 1px solid var(--cream-dark);
+      text-align: left;
+    }
+    .use-card {
+      background: var(--cream);
+      padding: 40px 28px;
+      transition: background 0.25s;
+    }
+    .use-card:hover { background: #F3EDE4; }
+    .use-icon {
+      width: 40px; height: 40px;
+      margin-bottom: 20px;
+      border-radius: 50%;
+      background: var(--cream-dark);
+      display: flex; align-items: center; justify-content: center;
+      font-size: 20px;
+    }
+    .use-card h3 {
+      font-family: var(--serif);
+      font-size: 17px; font-weight: 500;
+      color: var(--charcoal);
+      margin-bottom: 8px;
+    }
+    .use-card p { font-size: 13px; color: var(--charcoal-3); line-height: 1.55; }
+
+    .one-surface {
+      margin-top: 72px;
+      padding-top: 56px;
+      border-top: 1px solid var(--cream-dark);
+    }
+    .one-surface .tagline {
+      font-family: var(--serif);
+      font-size: clamp(22px, 3.2vw, 38px);
+      font-style: italic;
+      color: var(--charcoal-2);
+      margin-bottom: 10px;
+    }
+    .one-surface .sub {
+      font-size: 13px;
+      letter-spacing: 0.1em;
+      color: var(--charcoal-3);
+    }
+
+    /* ══════════════════════════════
+       SECTION: FEATURES (dark)
+    ══════════════════════════════ */
+    #features {
+      padding: 110px 52px;
+      background: var(--charcoal);
+    }
+    .features-head {
+      text-align: center;
+      margin-bottom: 72px;
+    }
+    .features-head .section-title { color: var(--white); }
+
+    .feat-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 1px;
+      background: rgba(255,255,255,0.07);
+    }
+    .feat-card {
+      background: var(--charcoal);
+      padding: 52px 44px;
+      transition: background 0.25s;
+    }
+    .feat-card:hover { background: rgba(255,255,255,0.03); }
+    .feat-num {
+      font-size: 11px;
+      letter-spacing: 0.16em;
+      color: var(--gold);
+      margin-bottom: 20px;
+    }
+    .feat-line { width: 36px; height: 2px; background: var(--gold); margin-bottom: 24px; }
+    .feat-card h3 {
+      font-family: var(--serif);
+      font-size: 25px; font-weight: 400;
+      color: var(--white);
+      margin-bottom: 14px; line-height: 1.2;
+    }
+    .feat-card p { font-size: 15px; color: rgba(255,255,255,0.58); line-height: 1.7; }
+
+    /* ══════════════════════════════
+       SECTION: ABOUT
+    ══════════════════════════════ */
+    #about {
+      padding: 0;
+      background: var(--cream-mid);
+      overflow: hidden;
+    }
+    .about-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      min-height: 620px;
+    }
+    .about-text {
+      padding: 100px 72px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
+    .about-text .section-title { color: var(--charcoal); margin-bottom: 26px; }
+    .about-text p {
+      font-size: 17px;
+      color: var(--charcoal-3);
+      line-height: 1.8;
+      margin-bottom: 14px;
+    }
+    .about-btns {
+      display: flex; gap: 18px; flex-wrap: wrap;
+      margin-top: 40px;
+    }
+    .about-img {
+      position: relative; overflow: hidden;
+    }
+    .about-img img {
+      width: 100%; height: 100%;
+      object-fit: cover;
+      transition: transform 0.7s var(--ease);
+    }
+    .about-img:hover img { transform: scale(1.04); }
+
+    /* ══════════════════════════════
+       SECTION: MADE IN INDIA
+    ══════════════════════════════ */
+    #origin {
+      padding: 80px 52px;
+      background: var(--walnut-2);
+      text-align: center;
+    }
+    .origin-wrap {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 56px;
+    }
+    .india-flag {
+      display: flex; flex-direction: column;
+      width: 52px; height: 36px;
+      overflow: hidden; border-radius: 2px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.25);
+    }
+    .india-flag span { flex: 1; }
+    .f-saffron { background: #FF9933; }
+    .f-white   { background: #FFFFFF; }
+    .f-green   { background: #138808; }
+    .flag-label {
+      font-size: 11px; font-weight: 500;
+      letter-spacing: 0.16em; text-transform: uppercase;
+      color: rgba(255,255,255,0.65);
+      margin-top: 10px;
+    }
+    .origin-divider { width: 1px; height: 64px; background: rgba(255,255,255,0.22); }
+    .origin-text h2 {
+      font-family: var(--serif);
+      font-size: clamp(24px, 3.5vw, 42px);
+      font-weight: 400;
+      color: var(--white);
+      margin-bottom: 10px;
+      text-align: left;
+    }
+    .origin-text p {
+      font-size: 16px;
+      color: rgba(255,255,255,0.72);
+      max-width: 460px;
+      text-align: left;
+    }
+
+    /* ══════════════════════════════
+       SECTION: CTA BANNER
+    ══════════════════════════════ */
+    #cta-banner {
+      position: relative;
+      padding: 160px 52px;
+      text-align: center;
+      overflow: hidden;
+    }
+    .cta-bg {
+      position: absolute; inset: 0;
+      background-color: #150D08;
+      background-image: url('https://images.unsplash.com/photo-1504674900247-0877df9cc836?auto=format&fit=crop&w=1920&q=82');
+      background-size: cover;
+      background-position: center;
+      background-attachment: fixed;
+    }
+    .cta-overlay {
+      position: absolute; inset: 0;
+      background: rgba(22, 14, 8, 0.72);
+    }
+    .cta-content { position: relative; z-index: 2; }
+    .cta-content h2 {
+      font-family: var(--serif);
+      font-size: clamp(34px, 5vw, 62px);
+      font-weight: 400;
+      color: var(--white);
+      letter-spacing: -0.02em;
+      margin-bottom: 22px;
+    }
+    .cta-content p {
+      font-size: 18px;
+      color: rgba(255,255,255,0.68);
+      max-width: 500px;
+      margin: 0 auto 40px;
+    }
+
+    /* ══════════════════════════════
+       SECTION: CONTACT
+    ══════════════════════════════ */
+    #contact {
+      padding: 110px 52px;
+      background: var(--cream);
+      text-align: center;
+    }
+    #contact .section-title { color: var(--charcoal); margin-bottom: 12px; }
+    #contact .subtitle {
+      font-size: 17px;
+      color: var(--charcoal-3);
+      margin-bottom: 56px;
+    }
+    .contact-form {
+      max-width: 540px;
+      margin: 0 auto;
+      display: flex;
+      flex-direction: column;
+      gap: 18px;
+      text-align: left;
+    }
+    .form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 18px; }
+    .contact-form input,
+    .contact-form textarea {
+      width: 100%;
+      padding: 16px 20px;
+      border: 1px solid var(--cream-dark);
+      background: var(--white);
+      color: var(--charcoal);
+      font-family: var(--sans);
+      font-size: 15px;
+      outline: none;
+      border-radius: 0;
+      -webkit-appearance: none;
+      transition: border-color 0.3s;
+    }
+    .contact-form input:focus,
+    .contact-form textarea:focus { border-color: var(--walnut); }
+    .contact-form input::placeholder,
+    .contact-form textarea::placeholder { color: rgba(107,93,85,0.45); font-size: 14px; }
+    .contact-form textarea { height: 140px; resize: none; }
+    .contact-form .btn-dark { align-self: center; border: none; }
+
+    /* ══════════════════════════════
+       FOOTER
+    ══════════════════════════════ */
+    footer {
+      background: var(--charcoal);
+      padding: 72px 52px 40px;
+    }
+    .footer-grid {
+      max-width: var(--max);
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: 2fr 1fr 1fr;
+      gap: 56px;
+      padding-bottom: 52px;
+      border-bottom: 1px solid rgba(255,255,255,0.09);
+      margin-bottom: 32px;
+    }
+    .footer-brand h3 {
+      font-family: var(--serif);
+      font-size: 24px; font-weight: 400;
+      color: var(--white);
+      margin-bottom: 14px;
+    }
+    .footer-brand p {
+      font-size: 14px;
+      color: rgba(255,255,255,0.45);
+      line-height: 1.7;
+      max-width: 300px;
+    }
+    .footer-col h4 {
+      font-size: 10px;
+      font-weight: 500;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      color: var(--gold);
+      margin-bottom: 20px;
+    }
+    .footer-col ul { list-style: none; display: flex; flex-direction: column; gap: 12px; }
+    .footer-col ul li a { font-size: 14px; color: rgba(255,255,255,0.45); transition: color 0.3s; }
+    .footer-col ul li a:hover { color: var(--white); }
+    .footer-bottom {
+      max-width: var(--max); margin: 0 auto;
+      display: flex; align-items: center; justify-content: space-between;
+    }
+    .footer-bottom p { font-size: 13px; color: rgba(255,255,255,0.28); }
+
+    /* ══════════════════════════════
+       RESPONSIVE
+    ══════════════════════════════ */
+    @media (max-width: 1024px) {
+      .use-grid { grid-template-columns: repeat(3, 1fr); }
+      .use-grid .use-card:nth-child(4),
+      .use-grid .use-card:nth-child(5) { }
+    }
+    @media (max-width: 900px) {
+      #nav, #nav.scrolled { padding: 18px 24px; }
+      .nav-links { display: none; }
+      section, #perfect-for, #features, #contact { padding: 72px 24px; }
+      .use-grid { grid-template-columns: repeat(2, 1fr); }
+      .feat-grid { grid-template-columns: 1fr; }
+      .about-grid { grid-template-columns: 1fr; }
+      .about-img  { height: 380px; }
+      .about-text { padding: 60px 28px; }
+      .origin-wrap { flex-direction: column; text-align: center; gap: 28px; }
+      .origin-divider { display: none; }
+      .origin-text h2, .origin-text p { text-align: center; }
+      #cta-banner { padding: 120px 24px; }
+      .footer-grid { grid-template-columns: 1fr; gap: 40px; }
+      .footer-bottom { flex-direction: column; gap: 10px; text-align: center; }
+      .form-row { grid-template-columns: 1fr; }
+    }
+    @media (max-width: 520px) {
+      .hero-content h1 { font-size: 36px; }
+      .hero-btns { flex-direction: column; align-items: center; }
+      .about-btns { flex-direction: column; }
+    }
+  </style>
+</head>
+<body>
+
+<!-- ═══ NAV ═══ -->
+<nav id="nav">
+  <a href="#" class="nav-logo">Rollio Kitchen</a>
+  <ul class="nav-links">
+    <li><a href="#perfect-for">Products</a></li>
+    <li><a href="#about">Our Story</a></li>
+    <li><a href="#contact">Contact</a></li>
+  </ul>
+  <a href="#contact" class="nav-shop">Shop Now</a>
+</nav>
+
+<!-- ═══ HERO ═══ -->
+<section id="hero">
+  <div class="hero-bg" id="heroBg"></div>
+  <div class="hero-overlay"></div>
+  <div class="hero-content">
+    <span class="hero-eyebrow">Rollio Kitchen — Premium Silicone Essentials</span>
+    <h1>Where tradition meets<br>effortless cooking.</h1>
+    <p class="hero-p">Premium silicone kitchen essentials designed for everyday Indian cooking.</p>
+    <p class="hero-p hero-sub">Timeless tools for modern homes.</p>
+    <div class="hero-btns">
+      <a href="#contact"      class="btn btn-gold">Shop the Collection</a>
+      <a href="#perfect-for"  class="btn btn-ghost">Discover More</a>
+    </div>
+  </div>
+  <div class="scroll-hint">
+    <div class="scroll-hint-line"></div>
+    <span>Scroll</span>
+  </div>
+</section>
+
+<!-- ═══ PERFECT FOR ═══ -->
+<section id="perfect-for">
+  <div class="container">
+    <div class="fade">
+      <span class="label">Designed for versatility</span>
+      <h2 class="section-title">Perfect for every occasion.</h2>
+      <p class="intro">From morning rotis to weekend baking — one surface covers it all.</p>
+    </div>
+    <div class="use-grid fade d2">
+      <div class="use-card">
+        <div class="use-icon">🫓</div>
+        <h3>Rotis &amp; Chapatis</h3>
+        <p>Smooth, even rolling every time. No sticking, no flour mess on your counter.</p>
+      </div>
+      <div class="use-card">
+        <div class="use-icon">🥙</div>
+        <h3>Stuffed Parathas</h3>
+        <p>Handle soft, filled doughs with confidence — edges stay intact.</p>
+      </div>
+      <div class="use-card">
+        <div class="use-icon">🥟</div>
+        <h3>Momos &amp; Dumplings</h3>
+        <p>Roll thin, even skins for perfect folds every time.</p>
+      </div>
+      <div class="use-card">
+        <div class="use-icon">🍪</div>
+        <h3>Cookies &amp; Fondant</h3>
+        <p>Delicate doughs stay intact from shaping to baking.</p>
+      </div>
+      <div class="use-card">
+        <div class="use-icon">🍕</div>
+        <h3>Pizza &amp; Pastry</h3>
+        <p>Stretch thin crusts and flaky pastry with ease and precision.</p>
+      </div>
+    </div>
+    <div class="one-surface fade d3">
+      <p class="tagline">"One surface. Endless creations."</p>
+      <span class="sub">Designed for everyday versatility.</span>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ FEATURES ═══ -->
+<section id="features">
+  <div class="container">
+    <div class="features-head fade">
+      <span class="label">Why Rollio</span>
+      <h2 class="section-title" style="color:var(--white)">Crafted for the way you cook.</h2>
+    </div>
+    <div class="feat-grid">
+      <div class="feat-card fade d1">
+        <div class="feat-num">01</div>
+        <div class="feat-line"></div>
+        <h3>Non-Stick Surface</h3>
+        <p>A smooth surface that lets dough glide effortlessly. Roll thin or thick — it moves with you, not against you.</p>
+      </div>
+      <div class="feat-card fade d2">
+        <div class="feat-num">02</div>
+        <div class="feat-line"></div>
+        <h3>Food-Grade Silicone</h3>
+        <p>Crafted from premium food-grade silicone. Safe for everyday cooking and approved for direct food contact.</p>
+      </div>
+      <div class="feat-card fade d3">
+        <div class="feat-num">03</div>
+        <div class="feat-line"></div>
+        <h3>Effortless Cleanup</h3>
+        <p>Made to simplify cleanup after every meal. A quick wipe is all it takes — spend more time at the table.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ ABOUT ═══ -->
+<section id="about">
+  <div class="about-grid">
+    <div class="about-text fade">
+      <span class="label">Our Story</span>
+      <h2 class="section-title">Cooking brings<br>people together.</h2>
+      <p>At Rollio Kitchen, we create thoughtfully designed kitchen essentials that make everyday Indian cooking cleaner, easier, and more enjoyable.</p>
+      <p>From soft rotis to festive pastries, our products are crafted to support the moments that happen around the kitchen table.</p>
+      <div class="about-btns">
+        <a href="#contact"     class="btn btn-dark">Shop the Collection</a>
+        <a href="#perfect-for" class="btn btn-outline">Explore the Range</a>
+      </div>
+    </div>
+    <div class="about-img">
+      <img
+        src="https://images.unsplash.com/photo-1574484284002-952d92a03a40?auto=format&fit=crop&w=900&q=82"
+        alt="Warm family cooking moment in a modern kitchen"
+        loading="lazy"
+      >
+    </div>
+  </div>
+</section>
+
+<!-- ═══ MADE IN INDIA ═══ -->
+<section id="origin">
+  <div class="container">
+    <div class="origin-wrap fade">
+      <div>
+        <div class="india-flag">
+          <span class="f-saffron"></span>
+          <span class="f-white"></span>
+          <span class="f-green"></span>
+        </div>
+        <div class="flag-label">Made in India</div>
+      </div>
+      <div class="origin-divider"></div>
+      <div class="origin-text">
+        <h2>Proudly made in India.</h2>
+        <p>Created for traditional and modern kitchens, cooking styles, and traditions. Designed for the way Indian families cook every day.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ CTA BANNER ═══ -->
+<section id="cta-banner">
+  <div class="cta-bg"></div>
+  <div class="cta-overlay"></div>
+  <div class="cta-content fade">
+    <span class="label">Experience smarter cooking</span>
+    <h2>Bring ease home.</h2>
+    <p>Join families across India who've made Rollio Kitchen a part of their everyday rhythm.</p>
+    <a href="#contact" class="btn btn-gold">Shop Now</a>
+  </div>
+</section>
+
+<!-- ═══ CONTACT ═══ -->
+<section id="contact">
+  <div class="container">
+    <div class="fade">
+      <span class="label">Get in touch</span>
+      <h2 class="section-title">We'd love to hear<br>from you.</h2>
+      <p class="subtitle">Questions, wholesale enquiries, or just say hello.</p>
+    </div>
+    <form class="contact-form fade d2" id="contactForm">
+      <div class="form-row">
+        <input type="text"  placeholder="Your Name"      required>
+        <input type="email" placeholder="Email Address"  required>
+      </div>
+      <input type="text" placeholder="Subject">
+      <textarea placeholder="Your message…"></textarea>
+      <button type="submit" class="btn btn-dark">Send Message</button>
+    </form>
+  </div>
+</section>
+
+<!-- ═══ FOOTER ═══ -->
+<footer>
+  <div class="footer-grid">
+    <div class="footer-brand">
+      <h3>Rollio Kitchen</h3>
+      <p>Premium silicone kitchen essentials designed for everyday Indian cooking. Crafted with care. Made in India.</p>
+    </div>
+    <div class="footer-col">
+      <h4>Explore</h4>
+      <ul>
+        <li><a href="#perfect-for">Products</a></li>
+        <li><a href="#about">Our Story</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h4>Support</h4>
+      <ul>
+        <li><a href="#contact">Wholesale Enquiries</a></li>
+        <li><a href="#contact">Shipping &amp; Returns</a></li>
+        <li><a href="#contact">FAQ</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <p>© 2025 Rollio Kitchen. All rights reserved.</p>
+    <p>Crafted with care in India.</p>
+  </div>
+</footer>
+
+<script>
+  // ─── NAV scroll ───
+  const nav = document.getElementById('nav');
+  window.addEventListener('scroll', () => {
+    nav.classList.toggle('scrolled', window.scrollY > 60);
+  }, { passive: true });
+
+  // ─── Hero entrance ───
+  window.addEventListener('load', () => {
+    const hero  = document.getElementById('hero');
+    const heroBg = document.getElementById('heroBg');
+    hero.classList.add('go');
+    heroBg.classList.add('ready');
+  });
+
+  // ─── Scroll fade-in ───
+  const io = new IntersectionObserver((entries) => {
+    entries.forEach(e => {
+      if (e.isIntersecting) {
+        e.target.classList.add('visible');
+        io.unobserve(e.target);
+      }
+    });
+  }, { threshold: 0.10, rootMargin: '0px 0px -40px 0px' });
+
+  document.querySelectorAll('.fade').forEach(el => io.observe(el));
+
+  // ─── Contact form ───
+  document.getElementById('contactForm').addEventListener('submit', function(e) {
+    e.preventDefault();
+    const btn = this.querySelector('button');
+    const original = btn.textContent;
+    btn.textContent = 'Message Sent ✓';
+    btn.style.background = '#4A7A50';
+    btn.disabled = true;
+    setTimeout(() => {
+      btn.textContent = original;
+      btn.style.background = '';
+      btn.disabled = false;
+      this.reset();
+    }, 3500);
+  });
+</script>
+
+</body>
+</html>
