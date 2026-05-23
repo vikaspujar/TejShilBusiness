@@ -3,12 +3,12 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="ROTI EASE — Multi-purpose non-stick silicone rolling mat designed for everyday Indian cooking. Timeless tools for modern homes.">
+  <meta name="description" content="Rollio Kitchen — Premium silicone kitchen essentials designed for everyday Indian cooking. Timeless tools for modern homes.">
   <meta name="theme-color" content="#1E1A18">
-  <meta property="og:title" content="ROTI EASE by Rollio Kitchen">
+  <meta property="og:title" content="Rollio Kitchen">
   <meta property="og:description" content="Where tradition meets effortless cooking. Premium silicone kitchen essentials for everyday Indian cooking.">
   <meta property="og:type" content="website">
-  <title>ROTI EASE — Multi-Purpose Non-Stick Rolling Mat</title>
+  <title>Rollio Kitchen — Premium Silicone Kitchen Essentials</title>
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -35,7 +35,7 @@
       --serif: 'Playfair Display', Georgia, serif;
       --sans:  'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
       --ease:  cubic-bezier(0.16, 1, 0.3, 1);
-      --max:   1200px;
+      --max:   1160px;
     }
 
     /* ─── BASE ─── */
@@ -52,20 +52,18 @@
 
     /* ─── UTILITIES ─── */
     .container { max-width: var(--max); margin: 0 auto; }
-
-    /* Labels — increased from 11px to 13px */
     .label {
       display: block;
-      font-size: 13px;
+      font-size: 11px;
       font-weight: 500;
       letter-spacing: 0.22em;
       text-transform: uppercase;
       color: var(--gold);
-      margin-bottom: 16px;
+      margin-bottom: 14px;
     }
     .section-title {
       font-family: var(--serif);
-      font-size: clamp(32px, 4vw, 52px);
+      font-size: clamp(30px, 4vw, 50px);
       font-weight: 400;
       line-height: 1.15;
       letter-spacing: -0.01em;
@@ -87,7 +85,7 @@
     .btn {
       display: inline-block;
       padding: 15px 38px;
-      font-size: 13px;
+      font-size: 12px;
       font-weight: 500;
       letter-spacing: 0.14em;
       text-transform: uppercase;
@@ -124,27 +122,19 @@
     }
     .nav-logo {
       font-family: var(--serif);
-      font-size: 22px;
-      font-weight: 600;
+      font-size: 21px;
+      font-weight: 500;
       color: var(--white);
-      letter-spacing: 0.05em;
+      letter-spacing: 0.02em;
       transition: color 0.4s;
     }
     #nav.scrolled .nav-logo { color: var(--charcoal); }
-    .nav-logo span {
-      font-size: 13px;
-      font-family: var(--sans);
-      font-weight: 300;
-      letter-spacing: 0.12em;
-      margin-left: 8px;
-      opacity: 0.7;
-    }
 
     .nav-links {
       display: flex; gap: 40px; list-style: none;
     }
     .nav-links a {
-      font-size: 13px;
+      font-size: 12px;
       font-weight: 400;
       letter-spacing: 0.14em;
       text-transform: uppercase;
@@ -155,7 +145,7 @@
     .nav-links a:hover, #nav.scrolled .nav-links a:hover { color: var(--gold) !important; }
 
     .nav-shop {
-      font-size: 13px;
+      font-size: 12px;
       font-weight: 500;
       letter-spacing: 0.14em;
       text-transform: uppercase;
@@ -182,11 +172,11 @@
     }
     .hero-bg {
       position: absolute; inset: 0;
-      background-color: #1C1208;
-      /* Indian woman making rotis / Indian kitchen context */
-      background-image: url('https://images.unsplash.com/photo-1596797038530-2c107229654b?auto=format&fit=crop&w=1920&q=82');
+      /* Warm dark kitchen fallback; Unsplash image loads on top */
+      background-color: #1E1208;
+      background-image: url('https://images.unsplash.com/photo-1556909114-f6e7ad7d3136?auto=format&fit=crop&w=1920&q=82');
       background-size: cover;
-      background-position: center 30%;
+      background-position: center;
       transform: scale(1.06);
       transition: transform 7s ease-out;
     }
@@ -195,46 +185,44 @@
       position: absolute; inset: 0;
       background: linear-gradient(
         to bottom,
-        rgba(16,10,5,0.55) 0%,
-        rgba(16,10,5,0.42) 45%,
-        rgba(16,10,5,0.72) 100%
+        rgba(18,11,7,0.52) 0%,
+        rgba(18,11,7,0.40) 45%,
+        rgba(18,11,7,0.68) 100%
       );
     }
     .hero-content {
       position: relative; z-index: 2;
-      max-width: 860px;
+      max-width: 820px;
       padding: 0 24px;
     }
-
-    /* Eyebrow — increased to 14px */
     .hero-eyebrow {
-      font-size: 14px;
+      font-size: 11px;
       font-weight: 500;
-      letter-spacing: 0.24em;
+      letter-spacing: 0.22em;
       text-transform: uppercase;
       color: var(--gold);
-      margin-bottom: 24px;
+      margin-bottom: 22px;
       opacity: 0;
       transform: translateY(14px);
       transition: all 0.8s var(--ease) 0.2s;
     }
     .hero-content h1 {
       font-family: var(--serif);
-      font-size: clamp(42px, 7vw, 84px);
+      font-size: clamp(40px, 6.5vw, 78px);
       font-weight: 400;
-      line-height: 1.08;
+      line-height: 1.1;
       color: var(--white);
       letter-spacing: -0.025em;
-      margin-bottom: 24px;
+      margin-bottom: 22px;
       opacity: 0;
       transform: translateY(22px);
       transition: all 0.9s var(--ease) 0.35s;
     }
     .hero-content .hero-p {
-      font-size: clamp(17px, 2vw, 20px);
+      font-size: clamp(16px, 2vw, 19px);
       font-weight: 300;
       color: rgba(255,255,255,0.80);
-      max-width: 540px;
+      max-width: 520px;
       margin: 0 auto 10px;
       line-height: 1.65;
       opacity: 0;
@@ -242,10 +230,10 @@
       transition: all 0.85s var(--ease) 0.5s;
     }
     .hero-content .hero-sub {
-      font-size: 14px;
+      font-size: 13px;
       color: rgba(255,255,255,0.55);
       letter-spacing: 0.1em;
-      margin-bottom: 44px;
+      margin-bottom: 42px;
     }
     .hero-btns {
       display: inline-flex;
@@ -256,6 +244,7 @@
       transform: translateY(14px);
       transition: all 0.8s var(--ease) 0.65s;
     }
+    /* trigger entrance */
     #hero.go .hero-eyebrow,
     #hero.go .hero-content h1,
     #hero.go .hero-content .hero-p,
@@ -268,7 +257,7 @@
       transform: translateX(-50%);
       display: flex; flex-direction: column; align-items: center; gap: 8px;
       color: rgba(255,255,255,0.4);
-      font-size: 11px; letter-spacing: 0.18em; text-transform: uppercase;
+      font-size: 10px; letter-spacing: 0.18em; text-transform: uppercase;
       z-index: 2;
       animation: bounce 2.4s ease-in-out infinite;
     }
@@ -279,7 +268,7 @@
     }
 
     /* ══════════════════════════════
-       SECTION: PERFECT FOR  (photo cards)
+       SECTION: PERFECT FOR
     ══════════════════════════════ */
     #perfect-for {
       padding: 110px 52px;
@@ -288,71 +277,41 @@
     }
     #perfect-for .section-title { color: var(--charcoal); margin-bottom: 14px; }
     #perfect-for .intro {
-      font-size: 18px;
+      font-size: 17px;
       color: var(--charcoal-3);
-      max-width: 500px;
+      max-width: 480px;
       margin: 0 auto 64px;
     }
 
-    /* 4-column photo card grid */
-    .food-grid {
+    .use-grid {
       display: grid;
-      grid-template-columns: repeat(4, 1fr);
-      gap: 12px;
-    }
-    .food-card {
-      position: relative;
-      aspect-ratio: 3 / 4;
-      overflow: hidden;
-      border-radius: 2px;
-      cursor: default;
-    }
-    .food-card-img {
-      width: 100%; height: 100%;
-      object-fit: cover;
-      transition: transform 0.55s var(--ease);
-    }
-    .food-card:hover .food-card-img { transform: scale(1.07); }
-    .food-card-overlay {
-      position: absolute; inset: 0;
-      background: linear-gradient(
-        to top,
-        rgba(20,12,5,0.82) 0%,
-        rgba(20,12,5,0.15) 55%,
-        transparent 100%
-      );
-    }
-    .food-card-label {
-      position: absolute;
-      bottom: 18px; left: 18px; right: 18px;
+      grid-template-columns: repeat(5, 1fr);
+      gap: 2px;
+      background: var(--cream-dark);
+      border: 1px solid var(--cream-dark);
       text-align: left;
     }
-    .food-card-label h3 {
+    .use-card {
+      background: var(--cream);
+      padding: 40px 28px;
+      transition: background 0.25s;
+    }
+    .use-card:hover { background: #F3EDE4; }
+    .use-icon {
+      width: 40px; height: 40px;
+      margin-bottom: 20px;
+      border-radius: 50%;
+      background: var(--cream-dark);
+      display: flex; align-items: center; justify-content: center;
+      font-size: 20px;
+    }
+    .use-card h3 {
       font-family: var(--serif);
-      font-size: 17px;
-      font-weight: 500;
-      color: var(--white);
-      line-height: 1.25;
-      margin-bottom: 3px;
+      font-size: 17px; font-weight: 500;
+      color: var(--charcoal);
+      margin-bottom: 8px;
     }
-    .food-card-label p {
-      font-size: 12px;
-      color: rgba(255,255,255,0.65);
-      letter-spacing: 0.05em;
-    }
-    /* Fallback bg colors if image fails */
-    .food-card:nth-child(1)  { background: #4A2E1A; }
-    .food-card:nth-child(2)  { background: #3E2A16; }
-    .food-card:nth-child(3)  { background: #5A3520; }
-    .food-card:nth-child(4)  { background: #452A18; }
-    .food-card:nth-child(5)  { background: #3A2510; }
-    .food-card:nth-child(6)  { background: #4E3020; }
-    .food-card:nth-child(7)  { background: #3C2514; }
-    .food-card:nth-child(8)  { background: #482C1C; }
-    .food-card:nth-child(9)  { background: #4A3020; }
-    .food-card:nth-child(10) { background: #3E2818; }
-    .food-card:nth-child(11) { background: #503520; }
-    .food-card:nth-child(12) { background: #422A16; }
+    .use-card p { font-size: 13px; color: var(--charcoal-3); line-height: 1.55; }
 
     .one-surface {
       margin-top: 72px;
@@ -361,121 +320,15 @@
     }
     .one-surface .tagline {
       font-family: var(--serif);
-      font-size: clamp(24px, 3.2vw, 40px);
+      font-size: clamp(22px, 3.2vw, 38px);
       font-style: italic;
       color: var(--charcoal-2);
       margin-bottom: 10px;
     }
     .one-surface .sub {
-      font-size: 14px;
+      font-size: 13px;
       letter-spacing: 0.1em;
       color: var(--charcoal-3);
-    }
-
-    /* ══════════════════════════════
-       SECTION: PRODUCT INFOGRAPHIC
-    ══════════════════════════════ */
-    #product-info {
-      padding: 110px 52px;
-      background: var(--cream-mid);
-    }
-    .product-info-grid {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 72px;
-      align-items: start;
-    }
-    .product-img-wrap {
-      position: sticky;
-      top: 100px;
-    }
-    .product-img-wrap img {
-      width: 100%;
-      border-radius: 4px;
-      box-shadow: 0 24px 64px rgba(0,0,0,0.15);
-    }
-    /* Shown only if the user adds the file to the repo */
-    .product-img-wrap .img-missing {
-      display: none;
-      background: var(--cream-dark);
-      border: 2px dashed var(--cream-dark);
-      border-radius: 4px;
-      padding: 48px 24px;
-      text-align: center;
-      color: var(--charcoal-3);
-      font-size: 14px;
-    }
-    .product-img-wrap img:not([src]),
-    .product-img-wrap img[src=""] { display:none; }
-
-    .product-specs { }
-    .product-specs .label { margin-bottom: 12px; }
-    .product-specs h2 {
-      font-family: var(--serif);
-      font-size: clamp(28px, 3.5vw, 42px);
-      font-weight: 400;
-      color: var(--charcoal);
-      line-height: 1.15;
-      margin-bottom: 10px;
-    }
-    .product-specs .product-sub {
-      font-size: 16px;
-      color: var(--gold);
-      font-weight: 500;
-      letter-spacing: 0.06em;
-      margin-bottom: 36px;
-    }
-    .spec-list {
-      list-style: none;
-      display: flex;
-      flex-direction: column;
-      gap: 14px;
-      margin-bottom: 44px;
-    }
-    .spec-list li {
-      display: flex;
-      align-items: flex-start;
-      gap: 14px;
-      font-size: 16px;
-      color: var(--charcoal-2);
-    }
-    .spec-check {
-      width: 22px; height: 22px; flex-shrink: 0;
-      background: var(--gold);
-      border-radius: 50%;
-      display: flex; align-items: center; justify-content: center;
-      margin-top: 2px;
-    }
-    .spec-check svg { width: 11px; height: 11px; stroke: white; fill: none; stroke-width: 2.5; stroke-linecap: round; stroke-linejoin: round; }
-
-    .care-title {
-      font-family: var(--serif);
-      font-size: 22px;
-      font-weight: 400;
-      color: var(--charcoal);
-      margin-bottom: 20px;
-      padding-top: 36px;
-      border-top: 1px solid var(--cream-dark);
-    }
-    .care-grid {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 16px;
-    }
-    .care-item {
-      background: var(--cream);
-      padding: 20px 16px;
-      text-align: center;
-      border-radius: 2px;
-    }
-    .care-icon {
-      font-size: 22px;
-      margin-bottom: 8px;
-    }
-    .care-item p {
-      font-size: 13px;
-      color: var(--charcoal-3);
-      line-height: 1.45;
     }
 
     /* ══════════════════════════════
@@ -503,11 +356,16 @@
       transition: background 0.25s;
     }
     .feat-card:hover { background: rgba(255,255,255,0.03); }
-    .feat-num { font-size: 12px; letter-spacing: 0.16em; color: var(--gold); margin-bottom: 20px; }
+    .feat-num {
+      font-size: 11px;
+      letter-spacing: 0.16em;
+      color: var(--gold);
+      margin-bottom: 20px;
+    }
     .feat-line { width: 36px; height: 2px; background: var(--gold); margin-bottom: 24px; }
     .feat-card h3 {
       font-family: var(--serif);
-      font-size: 26px; font-weight: 400;
+      font-size: 25px; font-weight: 400;
       color: var(--white);
       margin-bottom: 14px; line-height: 1.2;
     }
@@ -539,8 +397,13 @@
       line-height: 1.8;
       margin-bottom: 14px;
     }
-    .about-btns { display: flex; gap: 18px; flex-wrap: wrap; margin-top: 40px; }
-    .about-img { position: relative; overflow: hidden; }
+    .about-btns {
+      display: flex; gap: 18px; flex-wrap: wrap;
+      margin-top: 40px;
+    }
+    .about-img {
+      position: relative; overflow: hidden;
+    }
     .about-img img {
       width: 100%; height: 100%;
       object-fit: cover;
@@ -573,7 +436,7 @@
     .f-white   { background: #FFFFFF; }
     .f-green   { background: #138808; }
     .flag-label {
-      font-size: 12px; font-weight: 500;
+      font-size: 11px; font-weight: 500;
       letter-spacing: 0.16em; text-transform: uppercase;
       color: rgba(255,255,255,0.65);
       margin-top: 10px;
@@ -582,17 +445,20 @@
     .origin-text h2 {
       font-family: var(--serif);
       font-size: clamp(24px, 3.5vw, 42px);
-      font-weight: 400; color: var(--white);
-      margin-bottom: 10px; text-align: left;
+      font-weight: 400;
+      color: var(--white);
+      margin-bottom: 10px;
+      text-align: left;
     }
     .origin-text p {
-      font-size: 16px; color: rgba(255,255,255,0.72);
-      max-width: 460px; text-align: left;
+      font-size: 16px;
+      color: rgba(255,255,255,0.72);
+      max-width: 460px;
+      text-align: left;
     }
 
     /* ══════════════════════════════
        SECTION: CTA BANNER
-       Background: Indian food — puffed phulka, chole bhatura, dumplings, cookies
     ══════════════════════════════ */
     #cta-banner {
       position: relative;
@@ -602,28 +468,27 @@
     }
     .cta-bg {
       position: absolute; inset: 0;
-      /* Warm Indian food fallback */
-      background-color: #1A0D06;
-      background-image: url('https://images.unsplash.com/photo-1585937421612-70a008356fbe?auto=format&fit=crop&w=1920&q=82');
+      background-color: #150D08;
+      background-image: url('https://images.unsplash.com/photo-1504674900247-0877df9cc836?auto=format&fit=crop&w=1920&q=82');
       background-size: cover;
       background-position: center;
       background-attachment: fixed;
     }
     .cta-overlay {
       position: absolute; inset: 0;
-      background: rgba(18, 10, 4, 0.72);
+      background: rgba(22, 14, 8, 0.72);
     }
     .cta-content { position: relative; z-index: 2; }
     .cta-content h2 {
       font-family: var(--serif);
-      font-size: clamp(36px, 5.5vw, 68px);
+      font-size: clamp(34px, 5vw, 62px);
       font-weight: 400;
       color: var(--white);
       letter-spacing: -0.02em;
       margin-bottom: 22px;
     }
     .cta-content p {
-      font-size: 19px;
+      font-size: 18px;
       color: rgba(255,255,255,0.68);
       max-width: 500px;
       margin: 0 auto 40px;
@@ -646,7 +511,9 @@
     .contact-form {
       max-width: 540px;
       margin: 0 auto;
-      display: flex; flex-direction: column; gap: 18px;
+      display: flex;
+      flex-direction: column;
+      gap: 18px;
       text-align: left;
     }
     .form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 18px; }
@@ -690,14 +557,9 @@
     }
     .footer-brand h3 {
       font-family: var(--serif);
-      font-size: 26px; font-weight: 600;
+      font-size: 24px; font-weight: 400;
       color: var(--white);
-      letter-spacing: 0.05em;
-      margin-bottom: 6px;
-    }
-    .footer-brand .footer-tagline {
-      font-size: 13px; color: var(--gold);
-      letter-spacing: 0.1em; margin-bottom: 16px;
+      margin-bottom: 14px;
     }
     .footer-brand p {
       font-size: 14px;
@@ -706,8 +568,10 @@
       max-width: 300px;
     }
     .footer-col h4 {
-      font-size: 11px; font-weight: 500;
-      letter-spacing: 0.2em; text-transform: uppercase;
+      font-size: 10px;
+      font-weight: 500;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
       color: var(--gold);
       margin-bottom: 20px;
     }
@@ -723,16 +587,16 @@
     /* ══════════════════════════════
        RESPONSIVE
     ══════════════════════════════ */
-    @media (max-width: 1100px) {
-      .food-grid { grid-template-columns: repeat(3, 1fr); }
-      .product-info-grid { grid-template-columns: 1fr; gap: 48px; }
-      .product-img-wrap { position: static; }
+    @media (max-width: 1024px) {
+      .use-grid { grid-template-columns: repeat(3, 1fr); }
+      .use-grid .use-card:nth-child(4),
+      .use-grid .use-card:nth-child(5) { }
     }
     @media (max-width: 900px) {
       #nav, #nav.scrolled { padding: 18px 24px; }
       .nav-links { display: none; }
-      #perfect-for, #product-info, #features, #contact { padding: 72px 24px; }
-      .food-grid { grid-template-columns: repeat(2, 1fr); }
+      section, #perfect-for, #features, #contact { padding: 72px 24px; }
+      .use-grid { grid-template-columns: repeat(2, 1fr); }
       .feat-grid { grid-template-columns: 1fr; }
       .about-grid { grid-template-columns: 1fr; }
       .about-img  { height: 380px; }
@@ -744,13 +608,11 @@
       .footer-grid { grid-template-columns: 1fr; gap: 40px; }
       .footer-bottom { flex-direction: column; gap: 10px; text-align: center; }
       .form-row { grid-template-columns: 1fr; }
-      .care-grid { grid-template-columns: repeat(2, 1fr); }
     }
     @media (max-width: 520px) {
-      .hero-content h1 { font-size: 38px; }
+      .hero-content h1 { font-size: 36px; }
       .hero-btns { flex-direction: column; align-items: center; }
       .about-btns { flex-direction: column; }
-      .food-grid { grid-template-columns: repeat(2, 1fr); gap: 8px; }
     }
   </style>
 </head>
@@ -758,7 +620,7 @@
 
 <!-- ═══ NAV ═══ -->
 <nav id="nav">
-  <a href="#" class="nav-logo">ROTI EASE <span>by Rollio Kitchen</span></a>
+  <a href="#" class="nav-logo">Rollio Kitchen</a>
   <ul class="nav-links">
     <li><a href="#perfect-for">Products</a></li>
     <li><a href="#about">Our Story</a></li>
@@ -772,8 +634,7 @@
   <div class="hero-bg" id="heroBg"></div>
   <div class="hero-overlay"></div>
   <div class="hero-content">
-    <!-- Eyebrow increased to 14px in CSS -->
-    <span class="hero-eyebrow">ROTI EASE — Premium Silicone Essentials</span>
+    <span class="hero-eyebrow">Rollio Kitchen — Premium Silicone Essentials</span>
     <h1>Where tradition meets<br>effortless cooking.</h1>
     <p class="hero-p">Premium silicone kitchen essentials designed for everyday Indian cooking.</p>
     <p class="hero-p hero-sub">Timeless tools for modern homes.</p>
@@ -788,252 +649,44 @@
   </div>
 </section>
 
-<!-- ═══ PERFECT FOR — photo cards, 12 items ═══ -->
+<!-- ═══ PERFECT FOR ═══ -->
 <section id="perfect-for">
   <div class="container">
     <div class="fade">
-      <!-- Label increased to 13px in CSS -->
       <span class="label">Designed for versatility</span>
       <h2 class="section-title">Perfect for every occasion.</h2>
-      <p class="intro">From morning rotis to weekend baking — one mat covers it all.</p>
+      <p class="intro">From morning rotis to weekend baking — one surface covers it all.</p>
     </div>
-
-    <div class="food-grid fade d2">
-
-      <div class="food-card">
-        <img class="food-card-img"
-          src="https://images.unsplash.com/photo-1585937421612-70a008356fbe?auto=format&fit=crop&w=500&q=82"
-          alt="Chapathi and roti on a mat" loading="lazy">
-        <div class="food-card-overlay"></div>
-        <div class="food-card-label">
-          <h3>Chapathi / Roti</h3>
-          <p>Phulka · Puranpoli</p>
-        </div>
+    <div class="use-grid fade d2">
+      <div class="use-card">
+        <div class="use-icon">🫓</div>
+        <h3>Rotis &amp; Chapatis</h3>
+        <p>Smooth, even rolling every time. No sticking, no flour mess on your counter.</p>
       </div>
-
-      <div class="food-card">
-        <img class="food-card-img"
-          src="https://images.unsplash.com/photo-1574071318508-1cdbab80d002?auto=format&fit=crop&w=500&q=82"
-          alt="Stuffed paratha golden brown" loading="lazy">
-        <div class="food-card-overlay"></div>
-        <div class="food-card-label">
-          <h3>Paratha</h3>
-          <p>Plain & stuffed</p>
-        </div>
+      <div class="use-card">
+        <div class="use-icon">🥙</div>
+        <h3>Stuffed Parathas</h3>
+        <p>Handle soft, filled doughs with confidence — edges stay intact.</p>
       </div>
-
-      <div class="food-card">
-        <img class="food-card-img"
-          src="https://images.unsplash.com/photo-1567337710282-00832b415979?auto=format&fit=crop&w=500&q=82"
-          alt="Poori puffed Indian bread" loading="lazy">
-        <div class="food-card-overlay"></div>
-        <div class="food-card-label">
-          <h3>Poori &amp; Bhakri</h3>
-          <p>Thepla · South Indian rotti</p>
-        </div>
+      <div class="use-card">
+        <div class="use-icon">🥟</div>
+        <h3>Momos &amp; Dumplings</h3>
+        <p>Roll thin, even skins for perfect folds every time.</p>
       </div>
-
-      <div class="food-card">
-        <img class="food-card-img"
-          src="https://images.unsplash.com/photo-1563245372-f21724e3856d?auto=format&fit=crop&w=500&q=82"
-          alt="Momos and dumplings with dip" loading="lazy">
-        <div class="food-card-overlay"></div>
-        <div class="food-card-label">
-          <h3>Momos &amp; Dumplings</h3>
-          <p>Thin-skin wrappers</p>
-        </div>
+      <div class="use-card">
+        <div class="use-icon">🍪</div>
+        <h3>Cookies &amp; Fondant</h3>
+        <p>Delicate doughs stay intact from shaping to baking.</p>
       </div>
-
-      <div class="food-card">
-        <img class="food-card-img"
-          src="https://images.unsplash.com/photo-1601050690597-df0568f70950?auto=format&fit=crop&w=500&q=82"
-          alt="Crispy golden samosas" loading="lazy">
-        <div class="food-card-overlay"></div>
-        <div class="food-card-label">
-          <h3>Samosa Sheets</h3>
-          <p>Spring roll sheets</p>
-        </div>
+      <div class="use-card">
+        <div class="use-icon">🍕</div>
+        <h3>Pizza &amp; Pastry</h3>
+        <p>Stretch thin crusts and flaky pastry with ease and precision.</p>
       </div>
-
-      <div class="food-card">
-        <img class="food-card-img"
-          src="https://images.unsplash.com/photo-1568901346375-23c9450c58cd?auto=format&fit=crop&w=500&q=82"
-          alt="Papdi and mathri crispy snacks" loading="lazy">
-        <div class="food-card-overlay"></div>
-        <div class="food-card-label">
-          <h3>Papdi &amp; Mathri</h3>
-          <p>Crispy tea-time snacks</p>
-        </div>
-      </div>
-
-      <div class="food-card">
-        <img class="food-card-img"
-          src="https://images.unsplash.com/photo-1565299624596-c2d28bc4cba7?auto=format&fit=crop&w=500&q=82"
-          alt="Pizza dough being stretched" loading="lazy">
-        <div class="food-card-overlay"></div>
-        <div class="food-card-label">
-          <h3>Pizza Dough</h3>
-          <p>Stretch thin, bake crisp</p>
-        </div>
-      </div>
-
-      <div class="food-card">
-        <img class="food-card-img"
-          src="https://images.unsplash.com/photo-1464219789935-c2d9d9aba644?auto=format&fit=crop&w=500&q=82"
-          alt="Tortillas and flatbread wraps" loading="lazy">
-        <div class="food-card-overlay"></div>
-        <div class="food-card-label">
-          <h3>Tortillas &amp; Wraps</h3>
-          <p>Even rolling every time</p>
-        </div>
-      </div>
-
-      <div class="food-card">
-        <img class="food-card-img"
-          src="https://images.unsplash.com/photo-1558618666-fcd25c85cd64?auto=format&fit=crop&w=500&q=82"
-          alt="Flaky puff pastry and pie crusts" loading="lazy">
-        <div class="food-card-overlay"></div>
-        <div class="food-card-label">
-          <h3>Puff Pastry</h3>
-          <p>Pie crusts &amp; flaky layers</p>
-        </div>
-      </div>
-
-      <div class="food-card">
-        <img class="food-card-img"
-          src="https://images.unsplash.com/photo-1499636136210-6f4ee915583e?auto=format&fit=crop&w=500&q=82"
-          alt="Cookie dough ready to bake" loading="lazy">
-        <div class="food-card-overlay"></div>
-        <div class="food-card-label">
-          <h3>Cookie Dough</h3>
-          <p>Cut-out shapes, no mess</p>
-        </div>
-      </div>
-
-      <div class="food-card">
-        <img class="food-card-img"
-          src="https://images.unsplash.com/photo-1569913486515-b74bf7751574?auto=format&fit=crop&w=500&q=82"
-          alt="Decorated sugar cookies and fondant" loading="lazy">
-        <div class="food-card-overlay"></div>
-        <div class="food-card-label">
-          <h3>Sugar Cookies</h3>
-          <p>Fondant &amp; decoration work</p>
-        </div>
-      </div>
-
-      <div class="food-card">
-        <img class="food-card-img"
-          src="https://images.unsplash.com/photo-1551024709-8f23befc548e?auto=format&fit=crop&w=500&q=82"
-          alt="Marzipan and confectionery shaping" loading="lazy">
-        <div class="food-card-overlay"></div>
-        <div class="food-card-label">
-          <h3>Marzipan</h3>
-          <p>Sculpt &amp; shape cleanly</p>
-        </div>
-      </div>
-
-    </div><!-- /food-grid -->
-
+    </div>
     <div class="one-surface fade d3">
       <p class="tagline">"One surface. Endless creations."</p>
       <span class="sub">Designed for everyday versatility.</span>
-    </div>
-  </div>
-</section>
-
-<!-- ═══ PRODUCT INFO — infographic + specs ═══ -->
-<!--
-  IMPORTANT: To display your product infographic image here,
-  copy your image file into C:\Users\vikas.pujar\TejShilBusiness\
-  and name it: roti-ease-product.jpg
-  Then commit and push it to GitHub.
--->
-<section id="product-info">
-  <div class="container">
-    <div class="product-info-grid">
-
-      <!-- Product image (add roti-ease-product.jpg to repo root) -->
-      <div class="product-img-wrap fade">
-        <img
-          src="roti-ease-product.jpg"
-          alt="ROTI EASE — Multi-Purpose Non-Stick Rolling Mat product details"
-          onerror="this.style.display='none'; this.nextElementSibling.style.display='block';"
-        >
-        <div class="img-missing" style="display:none">
-          Add <strong>roti-ease-product.jpg</strong> to the repo folder to display product infographic here.
-        </div>
-      </div>
-
-      <!-- Specs from infographic -->
-      <div class="product-specs fade d2">
-        <span class="label">Product Details</span>
-        <h2>ROTI EASE</h2>
-        <p class="product-sub">Multi-Purpose Non-Stick Rolling Mat</p>
-
-        <ul class="spec-list">
-          <li>
-            <span class="spec-check"><svg viewBox="0 0 12 12"><polyline points="2,6 5,9 10,3"/></svg></span>
-            100% Food-grade Silicone
-          </li>
-          <li>
-            <span class="spec-check"><svg viewBox="0 0 12 12"><polyline points="2,6 5,9 10,3"/></svg></span>
-            Non-stick surface — no extra flour needed
-          </li>
-          <li>
-            <span class="spec-check"><svg viewBox="0 0 12 12"><polyline points="2,6 5,9 10,3"/></svg></span>
-            BPA Free
-          </li>
-          <li>
-            <span class="spec-check"><svg viewBox="0 0 12 12"><polyline points="2,6 5,9 10,3"/></svg></span>
-            Non-Toxic &amp; Odorless
-          </li>
-          <li>
-            <span class="spec-check"><svg viewBox="0 0 12 12"><polyline points="2,6 5,9 10,3"/></svg></span>
-            Teflon free
-          </li>
-          <li>
-            <span class="spec-check"><svg viewBox="0 0 12 12"><polyline points="2,6 5,9 10,3"/></svg></span>
-            Heat resistant up to 230°C
-          </li>
-          <li>
-            <span class="spec-check"><svg viewBox="0 0 12 12"><polyline points="2,6 5,9 10,3"/></svg></span>
-            Easy to clean &amp; reusable
-          </li>
-          <li>
-            <span class="spec-check"><svg viewBox="0 0 12 12"><polyline points="2,6 5,9 10,3"/></svg></span>
-            Flexible, durable &amp; long-lasting
-          </li>
-          <li>
-            <span class="spec-check"><svg viewBox="0 0 12 12"><polyline points="2,6 5,9 10,3"/></svg></span>
-            Ideal for home and professional kitchens
-          </li>
-        </ul>
-
-        <h3 class="care-title">Care Instructions</h3>
-        <div class="care-grid">
-          <div class="care-item">
-            <div class="care-icon">🧽</div>
-            <p>Wash before first use</p>
-          </div>
-          <div class="care-item">
-            <div class="care-icon">🚫</div>
-            <p>Avoid direct flame</p>
-          </div>
-          <div class="care-item">
-            <div class="care-icon">🫧</div>
-            <p>Clean with mild soap &amp; water, dry immediately</p>
-          </div>
-          <div class="care-item">
-            <div class="care-icon">⚠️</div>
-            <p>Do not use sharp objects</p>
-          </div>
-          <div class="care-item">
-            <div class="care-icon">📦</div>
-            <p>Store in a dry place</p>
-          </div>
-        </div>
-      </div>
-
     </div>
   </div>
 </section>
@@ -1042,7 +695,7 @@
 <section id="features">
   <div class="container">
     <div class="features-head fade">
-      <span class="label">Why ROTI EASE</span>
+      <span class="label">Why Rollio</span>
       <h2 class="section-title" style="color:var(--white)">Crafted for the way you cook.</h2>
     </div>
     <div class="feat-grid">
@@ -1050,19 +703,19 @@
         <div class="feat-num">01</div>
         <div class="feat-line"></div>
         <h3>Non-Stick Surface</h3>
-        <p>A smooth surface that lets dough glide effortlessly. No extra flour needed — roll thin or thick, it moves with you.</p>
+        <p>A smooth surface that lets dough glide effortlessly. Roll thin or thick — it moves with you, not against you.</p>
       </div>
       <div class="feat-card fade d2">
         <div class="feat-num">02</div>
         <div class="feat-line"></div>
         <h3>Food-Grade Silicone</h3>
-        <p>100% food-grade, BPA-free, Teflon-free, Non-Toxic. Safe for everyday cooking and direct food contact.</p>
+        <p>Crafted from premium food-grade silicone. Safe for everyday cooking and approved for direct food contact.</p>
       </div>
       <div class="feat-card fade d3">
         <div class="feat-num">03</div>
         <div class="feat-line"></div>
         <h3>Effortless Cleanup</h3>
-        <p>A quick rinse with mild soap is all it takes. Made to simplify cleanup after every meal — spend more time at the table.</p>
+        <p>Made to simplify cleanup after every meal. A quick wipe is all it takes — spend more time at the table.</p>
       </div>
     </div>
   </div>
@@ -1083,8 +736,8 @@
     </div>
     <div class="about-img">
       <img
-        src="https://images.unsplash.com/photo-1565557623262-b51c2513a641?auto=format&fit=crop&w=900&q=82"
-        alt="Indian family cooking together in a warm kitchen"
+        src="https://images.unsplash.com/photo-1574484284002-952d92a03a40?auto=format&fit=crop&w=900&q=82"
+        alt="Warm family cooking moment in a modern kitchen"
         loading="lazy"
       >
     </div>
@@ -1112,15 +765,15 @@
   </div>
 </section>
 
-<!-- ═══ CTA BANNER (Indian food imagery) ═══ -->
+<!-- ═══ CTA BANNER ═══ -->
 <section id="cta-banner">
   <div class="cta-bg"></div>
   <div class="cta-overlay"></div>
   <div class="cta-content fade">
     <span class="label">Experience smarter cooking</span>
-    <h2>Switch to smarter cooking<br>with ROTI EASE.</h2>
-    <p>Join families across India who've made ROTI EASE a part of their everyday rhythm.</p>
-    <a href="#contact" class="btn btn-gold">Bring Ease Home</a>
+    <h2>Bring ease home.</h2>
+    <p>Join families across India who've made Rollio Kitchen a part of their everyday rhythm.</p>
+    <a href="#contact" class="btn btn-gold">Shop Now</a>
   </div>
 </section>
 
@@ -1148,15 +801,13 @@
 <footer>
   <div class="footer-grid">
     <div class="footer-brand">
-      <h3>ROTI EASE</h3>
-      <div class="footer-tagline">by Rollio Kitchen</div>
-      <p>Multi-purpose non-stick silicone rolling mat. Premium food-grade silicone. Made in India.</p>
+      <h3>Rollio Kitchen</h3>
+      <p>Premium silicone kitchen essentials designed for everyday Indian cooking. Crafted with care. Made in India.</p>
     </div>
     <div class="footer-col">
       <h4>Explore</h4>
       <ul>
         <li><a href="#perfect-for">Products</a></li>
-        <li><a href="#product-info">Product Details</a></li>
         <li><a href="#about">Our Story</a></li>
         <li><a href="#contact">Contact</a></li>
       </ul>
@@ -1171,7 +822,7 @@
     </div>
   </div>
   <div class="footer-bottom">
-    <p>© 2025 ROTI EASE — Rollio Kitchen. All rights reserved.</p>
+    <p>© 2025 Rollio Kitchen. All rights reserved.</p>
     <p>Crafted with care in India.</p>
   </div>
 </footer>
@@ -1185,8 +836,10 @@
 
   // ─── Hero entrance ───
   window.addEventListener('load', () => {
-    document.getElementById('hero').classList.add('go');
-    document.getElementById('heroBg').classList.add('ready');
+    const hero  = document.getElementById('hero');
+    const heroBg = document.getElementById('heroBg');
+    hero.classList.add('go');
+    heroBg.classList.add('ready');
   });
 
   // ─── Scroll fade-in ───
@@ -1197,7 +850,7 @@
         io.unobserve(e.target);
       }
     });
-  }, { threshold: 0.08, rootMargin: '0px 0px -40px 0px' });
+  }, { threshold: 0.10, rootMargin: '0px 0px -40px 0px' });
 
   document.querySelectorAll('.fade').forEach(el => io.observe(el));
 
@@ -1205,11 +858,12 @@
   document.getElementById('contactForm').addEventListener('submit', function(e) {
     e.preventDefault();
     const btn = this.querySelector('button');
+    const original = btn.textContent;
     btn.textContent = 'Message Sent ✓';
     btn.style.background = '#4A7A50';
     btn.disabled = true;
     setTimeout(() => {
-      btn.textContent = 'Send Message';
+      btn.textContent = original;
       btn.style.background = '';
       btn.disabled = false;
       this.reset();
