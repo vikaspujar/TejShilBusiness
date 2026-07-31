@@ -157,6 +157,42 @@
     #nav.scrolled .nav-shop { border-color: var(--charcoal-2); color: var(--charcoal-2); }
     .nav-shop:hover { background: var(--gold) !important; border-color: var(--gold) !important; color: var(--white) !important; }
 
+    /* ─── AMAZON BUY STRIP ─── */
+    #amazon-strip {
+      background: #232F3E;
+      padding: 18px 52px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 24px;
+      flex-wrap: wrap;
+    }
+    .amz-text {
+      font-size: 14px;
+      color: rgba(255,255,255,0.75);
+      letter-spacing: 0.04em;
+    }
+    .amz-text strong { color: var(--white); }
+    .btn-amazon {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      background: #FF9900;
+      color: #111;
+      font-family: var(--sans);
+      font-size: 13px;
+      font-weight: 600;
+      letter-spacing: 0.06em;
+      padding: 11px 28px;
+      border-radius: 3px;
+      border: none;
+      cursor: pointer;
+      transition: background 0.25s, transform 0.2s;
+      white-space: nowrap;
+    }
+    .btn-amazon:hover { background: #e68900; transform: translateY(-1px); }
+    .btn-amazon svg { flex-shrink: 0; }
+
     /* ══════════════════════════════
        HERO
     ══════════════════════════════ */
@@ -624,7 +660,7 @@
     <li><a href="#about">Our Story</a></li>
     <li><a href="#contact">Contact</a></li>
   </ul>
-  <a href="#contact" class="nav-shop">Shop Now</a>
+  <a href="https://www.amazon.in/gp/product/B0H49NRR3V/ref=cx_skuctr_share?smid=A1RUQA1NM49FOQ" target="_blank" rel="noopener" class="nav-shop">Buy on Amazon</a>
 </nav>
 
 <!-- ═══ HERO ═══ -->
@@ -637,7 +673,7 @@
     <p class="hero-p">Premium silicone kitchen essentials designed for everyday Indian cooking.</p>
     <p class="hero-p hero-sub">Timeless tools for modern homes.</p>
     <div class="hero-btns">
-      <a href="#contact"      class="btn btn-gold">Shop the Collection</a>
+      <a href="https://www.amazon.in/gp/product/B0H49NRR3V/ref=cx_skuctr_share?smid=A1RUQA1NM49FOQ" target="_blank" rel="noopener" class="btn btn-gold">Buy on Amazon</a>
       <a href="#perfect-for"  class="btn btn-ghost">Discover More</a>
     </div>
   </div>
@@ -646,6 +682,19 @@
     <span>Scroll</span>
   </div>
 </section>
+
+<!-- ═══ AMAZON BUY STRIP ═══ -->
+<div id="amazon-strip">
+  <span class="amz-text"><strong>ROTI EASE</strong> is available on Amazon India — fast delivery, easy returns.</span>
+  <a href="https://www.amazon.in/gp/product/B0H49NRR3V/ref=cx_skuctr_share?smid=A1RUQA1NM49FOQ" target="_blank" rel="noopener" class="btn-amazon">
+    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <path d="M20.832 17.172c-3.338 2.21-8.187 3.389-12.36 3.389-5.851 0-11.115-2.163-15.1-5.76-.313-.282-.033-.667.343-.448 4.3 2.5 9.614 4.002 15.1 4.002 3.703 0 7.775-.768 11.516-2.363.565-.24 1.038.37.501.18z" fill="#111"/>
+      <path d="M22.218 15.53c-.428-.548-2.833-.26-3.913-.13-.328.04-.378-.246-.083-.452 1.916-1.347 5.061-.959 5.427-.507.367.453-.096 3.609-1.896 5.115-.277.232-.54.108-.417-.198.404-1.008 1.31-3.279.882-3.828z" fill="#111"/>
+      <path d="M12 2C6.477 2 2 6.477 2 12s4.477 10 10 10 10-4.477 10-10S17.523 2 12 2zm0 18a8 8 0 110-16 8 8 0 010 16z" fill="none"/>
+    </svg>
+    Interested? Buy Here on Amazon
+  </a>
+</div>
 
 <!-- ═══ PERFECT FOR ═══ -->
 <section id="perfect-for">
@@ -763,7 +812,7 @@
     <p>From soft rotis to festive pastries, our products are crafted to support the moments that happen around the kitchen table.</p>
     <p style="font-size:14px;color:var(--charcoal-3);margin-top:4px;">Care: wash before first use · avoid direct flame · clean with mild soap &amp; water · do not use sharp objects · store in a dry place.</p>
     <div class="about-btns">
-      <a href="#contact"     class="btn btn-dark">Shop the Collection</a>
+      <a href="https://www.amazon.in/gp/product/B0H49NRR3V/ref=cx_skuctr_share?smid=A1RUQA1NM49FOQ" target="_blank" rel="noopener" class="btn btn-dark">Buy Now on Amazon →</a>
       <a href="#perfect-for" class="btn btn-outline">Explore the Range</a>
     </div>
   </div>
@@ -798,7 +847,7 @@
     <span class="label">Experience smarter cooking</span>
     <h2>Switch to smarter cooking<br>with ROTI EASE.</h2>
     <p>Join families across India who've made ROTI EASE a part of their everyday rhythm.</p>
-    <a href="#contact" class="btn btn-gold">Shop Now</a>
+    <a href="https://www.amazon.in/gp/product/B0H49NRR3V/ref=cx_skuctr_share?smid=A1RUQA1NM49FOQ" target="_blank" rel="noopener" class="btn btn-gold">Order Now on Amazon</a>
   </div>
 </section>
 
@@ -835,6 +884,7 @@
         <li><a href="#perfect-for">Products</a></li>
         <li><a href="#about">Our Story</a></li>
         <li><a href="#contact">Contact</a></li>
+        <li><a href="https://www.amazon.in/gp/product/B0H49NRR3V/ref=cx_skuctr_share?smid=A1RUQA1NM49FOQ" target="_blank" rel="noopener" style="color:var(--gold);font-weight:500;">🛒 Buy on Amazon</a></li>
       </ul>
     </div>
     <div class="footer-col">
