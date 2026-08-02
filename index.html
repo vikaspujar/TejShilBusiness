@@ -4,15 +4,15 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="description" content="ROTI EASE — Multi-purpose non-stick silicone rolling mat. 100% food-grade silicone, BPA free, Teflon free. Made in India by Rollio Kitchen.">
-  <meta name="theme-color" content="#1E1A18">
+  <meta name="theme-color" content="#FFFFFF">
   <meta property="og:title" content="ROTI EASE by Rollio Kitchen">
-  <meta property="og:description" content="Where tradition meets effortless cooking. Premium silicone kitchen essentials for everyday Indian cooking.">
+  <meta property="og:description" content="Premium food-grade silicone rolling mat for Indian cooking. Perfect for rotis, parathas, holige, and more.">
   <meta property="og:type" content="website">
-  <title>ROTI EASE — Multi-Purpose Non-Stick Rolling Mat</title>
+  <title>ROTI EASE — Multi-Purpose Non-Stick Rolling Mat | Rollio Kitchen</title>
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;1,400&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;1,400&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
 
   <style>
     /* ─── RESET ─── */
@@ -21,16 +21,21 @@
 
     /* ─── TOKENS ─── */
     :root {
-      --cream:       #FAF7F2;
-      --cream-mid:   #EDE7DC;
-      --cream-dark:  #E0D8CC;
-      --charcoal:    #1E1A18;
-      --charcoal-2:  #3A3028;
-      --charcoal-3:  #6B5D55;
-      --walnut:      #7A5C3A;
-      --walnut-2:    #B8834A;
-      --gold:        #C4903A;
-      --white:       #FFFFFF;
+      --white:      #FFFFFF;
+      --off-white:  #FDFAF6;
+      --cream:      #F5EFE6;
+      --cream-mid:  #EAE0D2;
+      --border:     #E0D8CC;
+      --charcoal:   #1A1714;
+      --text:       #2C2620;
+      --text-lt:    #6B5D55;
+      --gold:       #C4903A;
+      --gold-lt:    #E8C070;
+      --green-dk:   #1C3A0E;
+      --green-md:   #2D5016;
+      --amazon:     #FF9900;
+      --whatsapp:   #25D366;
+      --wa-dark:    #128C7E;
 
       --serif: 'Playfair Display', Georgia, serif;
       --sans:  'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
@@ -41,404 +46,353 @@
     /* ─── BASE ─── */
     body {
       font-family: var(--sans);
-      background: var(--cream);
-      color: var(--charcoal-2);
+      background: var(--white);
+      color: var(--text);
       line-height: 1.7;
       overflow-x: hidden;
       -webkit-font-smoothing: antialiased;
     }
-    img  { display: block; max-width: 100%; }
-    a    { text-decoration: none; color: inherit; }
+    img { display: block; max-width: 100%; }
+    a   { text-decoration: none; color: inherit; }
+    ul  { list-style: none; padding: 0; }
 
     /* ─── UTILITIES ─── */
-    .container { max-width: var(--max); margin: 0 auto; }
-    .label {
+    .container { max-width: var(--max); margin: 0 auto; padding: 0 32px; }
+    .eyebrow {
       display: block;
-      font-size: 11px;
-      font-weight: 500;
-      letter-spacing: 0.22em;
-      text-transform: uppercase;
-      color: var(--gold);
-      margin-bottom: 14px;
+      font-size: 11px; font-weight: 600;
+      letter-spacing: 0.2em; text-transform: uppercase;
+      color: var(--gold); margin-bottom: 12px;
     }
-    .section-title {
+    .sec-head { text-align: center; margin-bottom: 56px; }
+    .sec-title {
       font-family: var(--serif);
-      font-size: clamp(30px, 4vw, 50px);
-      font-weight: 400;
-      line-height: 1.15;
-      letter-spacing: -0.01em;
+      font-size: clamp(28px, 4vw, 46px);
+      font-weight: 400; line-height: 1.2;
+      color: var(--charcoal); margin-bottom: 12px;
     }
+    .sec-sub {
+      font-size: 16px; color: var(--text-lt);
+      max-width: 480px; margin: 0 auto;
+    }
+    .sec-rule { width: 36px; height: 2px; background: var(--gold); margin: 16px auto 0; }
 
-    /* ─── FADE ANIMATION ─── */
+    /* ─── FADE ─── */
     .fade {
-      opacity: 0;
-      transform: translateY(28px);
-      transition: opacity 0.75s var(--ease), transform 0.75s var(--ease);
+      opacity: 0; transform: translateY(24px);
+      transition: opacity 0.7s var(--ease), transform 0.7s var(--ease);
     }
-    .fade.visible          { opacity: 1; transform: none; }
-    .fade.d1               { transition-delay: 0.10s; }
-    .fade.d2               { transition-delay: 0.20s; }
-    .fade.d3               { transition-delay: 0.30s; }
-    .fade.d4               { transition-delay: 0.40s; }
+    .fade.visible { opacity: 1; transform: none; }
+    .fade.d1 { transition-delay: 0.1s; }
+    .fade.d2 { transition-delay: 0.2s; }
+    .fade.d3 { transition-delay: 0.3s; }
+    .fade.d4 { transition-delay: 0.4s; }
 
     /* ─── BUTTONS ─── */
     .btn {
-      display: inline-block;
-      padding: 15px 38px;
-      font-size: 12px;
-      font-weight: 500;
-      letter-spacing: 0.14em;
-      text-transform: uppercase;
-      transition: all 0.3s;
-      cursor: pointer;
+      display: inline-flex; align-items: center; gap: 7px;
+      padding: 13px 28px;
+      font-family: var(--sans); font-size: 12px; font-weight: 600;
+      letter-spacing: 0.1em; text-transform: uppercase;
+      cursor: pointer; border: none; transition: all 0.25s;
     }
-    .btn-gold   { background: var(--gold);    color: var(--white); border: 1px solid var(--gold); }
-    .btn-gold:hover { background: var(--walnut-2); border-color: var(--walnut-2); transform: translateY(-1px); }
-    .btn-ghost  { border: 1px solid rgba(255,255,255,0.45); color: var(--white); }
-    .btn-ghost:hover { background: rgba(255,255,255,0.1); border-color: var(--white); }
-    .btn-dark   { background: var(--charcoal); color: var(--white); border: 1px solid var(--charcoal); font-family: var(--sans); }
-    .btn-dark:hover { background: var(--charcoal-2); }
-    .btn-outline { border: 1px solid var(--charcoal-2); color: var(--charcoal-2); }
-    .btn-outline:hover { background: var(--charcoal); color: var(--white); }
-    .btn-amazon {
-      background: #FF9900;
-      color: var(--charcoal);
-      border: 1px solid #FF9900;
-      font-weight: 600;
-      display: inline-flex;
-      align-items: center;
-      gap: 8px;
-    }
-    .btn-amazon:hover { background: #e68a00; border-color: #e68a00; transform: translateY(-1px); color: var(--charcoal); }
-    .btn-amazon .amz-icon { font-size: 14px; }
+    .btn-amazon  { background: var(--amazon); color: var(--charcoal); }
+    .btn-amazon:hover  { background: #e68a00; transform: translateY(-1px); }
+    .btn-whatsapp { background: var(--whatsapp); color: #fff; }
+    .btn-whatsapp:hover { background: var(--wa-dark); transform: translateY(-1px); }
+    .btn-dark    { background: var(--charcoal); color: #fff; border: 1.5px solid var(--charcoal); }
+    .btn-dark:hover { background: #2C2620; }
+    .btn-outline { border: 1.5px solid var(--charcoal); color: var(--charcoal); background: transparent; }
+    .btn-outline:hover { background: var(--charcoal); color: #fff; }
+    .btn-gold    { background: var(--gold); color: #fff; }
+    .btn-gold:hover { background: #a87830; transform: translateY(-1px); }
+    .btn-ghost   { border: 1.5px solid rgba(255,255,255,0.5); color: #fff; background: transparent; }
+    .btn-ghost:hover { background: rgba(255,255,255,0.1); border-color: #fff; }
 
-    /* ══════════════════════════════
+    /* ═══════════════════════
        NAV
-    ══════════════════════════════ */
+    ═══════════════════════ */
     #nav {
-      position: fixed;
-      top: 0; width: 100%;
-      z-index: 100;
-      padding: 26px 52px;
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      transition: background 0.4s var(--ease), padding 0.4s var(--ease), box-shadow 0.4s;
+      position: fixed; top: 0; width: 100%; z-index: 100;
+      padding: 20px 48px;
+      display: flex; align-items: center; justify-content: space-between;
+      transition: background 0.4s, padding 0.4s, box-shadow 0.4s;
     }
     #nav.scrolled {
-      background: rgba(250, 247, 242, 0.96);
-      padding: 16px 52px;
-      backdrop-filter: blur(10px);
-      box-shadow: 0 1px 0 var(--cream-dark);
+      background: rgba(253,250,246,0.97);
+      padding: 13px 48px;
+      backdrop-filter: blur(12px);
+      box-shadow: 0 1px 0 var(--border);
     }
     .nav-logo {
-      font-family: var(--serif);
-      font-size: 21px;
-      font-weight: 500;
-      color: var(--white);
-      letter-spacing: 0.02em;
-      transition: color 0.4s;
+      font-family: var(--serif); font-size: 20px; font-weight: 500;
+      color: #fff; letter-spacing: 0.04em; transition: color 0.4s;
     }
     #nav.scrolled .nav-logo { color: var(--charcoal); }
-
-    .nav-links {
-      display: flex; gap: 40px; list-style: none;
-    }
+    .nav-links { display: flex; gap: 32px; }
     .nav-links a {
-      font-size: 12px;
-      font-weight: 400;
-      letter-spacing: 0.14em;
-      text-transform: uppercase;
-      color: rgba(255,255,255,0.8);
-      transition: color 0.3s;
+      font-size: 12px; font-weight: 500;
+      letter-spacing: 0.12em; text-transform: uppercase;
+      color: rgba(255,255,255,0.8); transition: color 0.3s;
     }
-    #nav.scrolled .nav-links a { color: var(--charcoal-3); }
+    #nav.scrolled .nav-links a { color: var(--text-lt); }
     .nav-links a:hover, #nav.scrolled .nav-links a:hover { color: var(--gold) !important; }
-
-    .nav-shop {
-      font-size: 12px;
-      font-weight: 500;
-      letter-spacing: 0.14em;
-      text-transform: uppercase;
-      padding: 10px 26px;
-      border: 1px solid rgba(255,255,255,0.45);
-      color: var(--white);
-      transition: all 0.3s;
+    .nav-ctas { display: flex; gap: 8px; }
+    .nav-amazon {
+      font-size: 11px; font-weight: 600; letter-spacing: 0.1em; text-transform: uppercase;
+      padding: 9px 16px; background: var(--amazon); color: var(--charcoal);
+      transition: background 0.25s;
     }
-    #nav.scrolled .nav-shop { border-color: var(--charcoal-2); color: var(--charcoal-2); }
-    .nav-shop:hover { background: var(--gold) !important; border-color: var(--gold) !important; color: var(--white) !important; }
+    .nav-amazon:hover { background: #e68a00; }
+    .nav-wa {
+      font-size: 11px; font-weight: 600; letter-spacing: 0.1em; text-transform: uppercase;
+      padding: 9px 16px; background: var(--whatsapp); color: #fff;
+      transition: background 0.25s;
+    }
+    .nav-wa:hover { background: var(--wa-dark); }
 
-    /* ══════════════════════════════
+    /* ═══════════════════════
        HERO
-    ══════════════════════════════ */
+    ═══════════════════════ */
     #hero {
-      position: relative;
-      height: 100vh;
-      min-height: 680px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      text-align: center;
-      overflow: hidden;
+      position: relative; height: 100vh; min-height: 680px;
+      display: flex; align-items: center; justify-content: center;
+      text-align: center; overflow: hidden;
     }
     .hero-bg {
       position: absolute; inset: 0;
-      /* Warm dark kitchen fallback; Unsplash image loads on top */
       background-color: #1E1208;
       background-image: url('https://images.unsplash.com/photo-1556909114-f6e7ad7d3136?auto=format&fit=crop&w=1920&q=82');
-      background-size: cover;
-      background-position: center;
-      transform: scale(1.06);
-      transition: transform 7s ease-out;
+      background-size: cover; background-position: center;
+      transform: scale(1.06); transition: transform 7s ease-out;
     }
     .hero-bg.ready { transform: scale(1); }
     .hero-overlay {
       position: absolute; inset: 0;
-      background: linear-gradient(
-        to bottom,
-        rgba(18,11,7,0.52) 0%,
-        rgba(18,11,7,0.40) 45%,
-        rgba(18,11,7,0.68) 100%
+      background: linear-gradient(to bottom,
+        rgba(14,9,4,0.55) 0%,
+        rgba(14,9,4,0.36) 45%,
+        rgba(14,9,4,0.74) 100%
       );
     }
     .hero-content {
       position: relative; z-index: 2;
-      max-width: 820px;
-      padding: 0 24px;
+      max-width: 820px; padding: 0 24px;
     }
     .hero-eyebrow {
-      font-size: 11px;
-      font-weight: 500;
-      letter-spacing: 0.22em;
-      text-transform: uppercase;
-      color: var(--gold);
-      margin-bottom: 22px;
-      opacity: 0;
-      transform: translateY(14px);
+      font-size: 11px; font-weight: 600;
+      letter-spacing: 0.22em; text-transform: uppercase;
+      color: var(--gold); margin-bottom: 18px;
+      opacity: 0; transform: translateY(14px);
       transition: all 0.8s var(--ease) 0.2s;
     }
     .hero-content h1 {
       font-family: var(--serif);
-      font-size: clamp(40px, 6.5vw, 78px);
-      font-weight: 400;
-      line-height: 1.1;
-      color: var(--white);
-      letter-spacing: -0.025em;
-      margin-bottom: 22px;
-      opacity: 0;
-      transform: translateY(22px);
+      font-size: clamp(36px, 6vw, 72px);
+      font-weight: 400; line-height: 1.1;
+      color: #fff; letter-spacing: -0.02em; margin-bottom: 18px;
+      opacity: 0; transform: translateY(22px);
       transition: all 0.9s var(--ease) 0.35s;
     }
-    .hero-content .hero-p {
-      font-size: clamp(16px, 2vw, 19px);
-      font-weight: 300;
-      color: rgba(255,255,255,0.80);
-      max-width: 520px;
-      margin: 0 auto 10px;
-      line-height: 1.65;
-      opacity: 0;
-      transform: translateY(18px);
+    .hero-p {
+      font-size: clamp(15px, 1.8vw, 18px); font-weight: 300;
+      color: rgba(255,255,255,0.82); max-width: 500px;
+      margin: 0 auto 38px;
+      opacity: 0; transform: translateY(18px);
       transition: all 0.85s var(--ease) 0.5s;
     }
-    .hero-content .hero-sub {
-      font-size: 13px;
-      color: rgba(255,255,255,0.55);
-      letter-spacing: 0.1em;
-      margin-bottom: 42px;
-    }
     .hero-btns {
-      display: inline-flex;
-      gap: 16px;
-      flex-wrap: wrap;
-      justify-content: center;
-      opacity: 0;
-      transform: translateY(14px);
+      display: inline-flex; gap: 12px; flex-wrap: wrap; justify-content: center;
+      opacity: 0; transform: translateY(14px);
       transition: all 0.8s var(--ease) 0.65s;
     }
-    /* trigger entrance */
     #hero.go .hero-eyebrow,
     #hero.go .hero-content h1,
-    #hero.go .hero-content .hero-p,
-    #hero.go .hero-btns {
-      opacity: 1;
-      transform: none;
-    }
+    #hero.go .hero-p,
+    #hero.go .hero-btns { opacity: 1; transform: none; }
     .scroll-hint {
-      position: absolute; bottom: 38px; left: 50%;
-      transform: translateX(-50%);
+      position: absolute; bottom: 36px; left: 50%; transform: translateX(-50%);
       display: flex; flex-direction: column; align-items: center; gap: 8px;
       color: rgba(255,255,255,0.4);
       font-size: 10px; letter-spacing: 0.18em; text-transform: uppercase;
-      z-index: 2;
-      animation: bounce 2.4s ease-in-out infinite;
+      z-index: 2; animation: bounce 2.4s ease-in-out infinite;
     }
-    .scroll-hint-line { width: 1px; height: 36px; background: rgba(255,255,255,0.25); }
+    .scroll-hint-line { width: 1px; height: 32px; background: rgba(255,255,255,0.25); }
     @keyframes bounce {
       0%,100% { transform: translateX(-50%) translateY(0); }
       50%      { transform: translateX(-50%) translateY(7px); }
     }
 
-    /* ══════════════════════════════
-       SECTION: PERFECT FOR
-    ══════════════════════════════ */
-    #perfect-for {
-      padding: 110px 52px;
-      background: var(--cream);
-      text-align: center;
+    /* ═══════════════════════
+       TRUST BADGES STRIP
+    ═══════════════════════ */
+    #badges {
+      background: var(--green-dk);
+      padding: 18px 24px;
     }
-    #perfect-for .section-title { color: var(--charcoal); margin-bottom: 14px; }
-    #perfect-for .intro {
-      font-size: 17px;
-      color: var(--charcoal-3);
-      max-width: 480px;
-      margin: 0 auto 64px;
+    .badges-row {
+      display: flex; flex-wrap: wrap;
+      align-items: center; justify-content: center;
+      gap: 6px 28px;
     }
+    .badge-item {
+      display: flex; align-items: center; gap: 7px;
+      font-size: 11px; font-weight: 600;
+      letter-spacing: 0.1em; text-transform: uppercase;
+      color: rgba(255,255,255,0.88); white-space: nowrap;
+    }
+    .badge-sep { color: rgba(255,255,255,0.2); font-size: 16px; }
 
-    .use-grid {
-      display: grid;
-      grid-template-columns: repeat(4, 1fr);
-      gap: 2px;
-      background: var(--cream-dark);
-      border: 1px solid var(--cream-dark);
-      text-align: left;
+    /* ═══════════════════════
+       CERTIFIED / PRODUCT
+    ═══════════════════════ */
+    #certified { padding: 88px 0; background: var(--off-white); }
+    .certified-grid {
+      display: grid; grid-template-columns: 1fr 1fr;
+      gap: 64px; align-items: start;
     }
-    .use-card {
-      background: var(--cream);
-      padding: 40px 28px;
-      transition: background 0.25s;
-    }
-    .use-card:hover { background: #F3EDE4; }
-    .use-icon {
-      width: 40px; height: 40px;
-      margin-bottom: 20px;
-      border-radius: 50%;
-      background: var(--cream-dark);
-      display: flex; align-items: center; justify-content: center;
-      font-size: 20px;
-    }
-    .use-card h3 {
+    .cert-text h2 {
       font-family: var(--serif);
-      font-size: 17px; font-weight: 500;
-      color: var(--charcoal);
-      margin-bottom: 8px;
+      font-size: clamp(24px, 3.2vw, 40px);
+      font-weight: 400; line-height: 1.2;
+      color: var(--charcoal); margin-bottom: 18px;
     }
-    .use-card p { font-size: 13px; color: var(--charcoal-3); line-height: 1.55; }
+    .cert-text > p {
+      font-size: 15px; color: var(--text-lt);
+      line-height: 1.75; margin-bottom: 14px;
+    }
+    .cert-text > p.cert-highlight {
+      font-size: 14px; color: var(--gold); font-weight: 600;
+      margin-bottom: 24px;
+    }
+    .cert-checks {
+      display: grid; grid-template-columns: 1fr 1fr;
+      gap: 8px 16px; margin-bottom: 28px;
+    }
+    .cert-check {
+      display: flex; align-items: flex-start; gap: 8px;
+      font-size: 13px; color: var(--text);
+    }
+    .cert-check .tick { color: var(--green-md); font-weight: 700; font-size: 13px; flex-shrink: 0; margin-top: 2px; }
+    .cert-btns { display: flex; gap: 12px; flex-wrap: wrap; }
 
-    .one-surface {
-      margin-top: 72px;
-      padding-top: 56px;
-      border-top: 1px solid var(--cream-dark);
-    }
-    .one-surface .tagline {
+    .cert-uses h3 {
       font-family: var(--serif);
-      font-size: clamp(22px, 3.2vw, 38px);
-      font-style: italic;
-      color: var(--charcoal-2);
-      margin-bottom: 10px;
+      font-size: 19px; font-weight: 500;
+      color: var(--charcoal); margin-bottom: 16px;
     }
-    .one-surface .sub {
-      font-size: 13px;
-      letter-spacing: 0.1em;
-      color: var(--charcoal-3);
+    .cert-uses-grid {
+      display: grid; grid-template-columns: 1fr 1fr;
+      gap: 1px; background: var(--border);
+      border: 1px solid var(--border);
     }
+    .cert-use-item {
+      background: var(--white); padding: 13px 16px;
+      display: flex; align-items: center; gap: 10px;
+      font-size: 13px; color: var(--text);
+      transition: background 0.2s;
+    }
+    .cert-use-item:hover { background: var(--cream); }
+    .use-em { font-size: 17px; }
 
-    /* ══════════════════════════════
-       SECTION: FEATURES (dark)
-    ══════════════════════════════ */
-    #features {
-      padding: 110px 52px;
-      background: var(--charcoal);
-    }
-    .features-head {
-      text-align: center;
-      margin-bottom: 72px;
-    }
-    .features-head .section-title { color: var(--white); }
-
+    /* ═══════════════════════
+       FEATURES (dark)
+    ═══════════════════════ */
+    #features { padding: 88px 0; background: var(--charcoal); }
+    .features-head { color: var(--white); }
+    .features-head .sec-title { color: var(--white); }
     .feat-grid {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 1px;
-      background: rgba(255,255,255,0.07);
+      display: grid; grid-template-columns: repeat(3, 1fr);
+      gap: 1px; background: rgba(255,255,255,0.06);
+      max-width: var(--max); margin: 56px auto 0;
     }
     .feat-card {
-      background: var(--charcoal);
-      padding: 52px 44px;
+      background: var(--charcoal); padding: 48px 40px;
       transition: background 0.25s;
     }
     .feat-card:hover { background: rgba(255,255,255,0.03); }
-    .feat-num {
-      font-size: 11px;
-      letter-spacing: 0.16em;
-      color: var(--gold);
-      margin-bottom: 20px;
-    }
-    .feat-line { width: 36px; height: 2px; background: var(--gold); margin-bottom: 24px; }
+    .feat-num { font-size: 11px; letter-spacing: 0.16em; color: var(--gold); margin-bottom: 16px; }
+    .feat-line { width: 32px; height: 2px; background: var(--gold); margin-bottom: 22px; }
     .feat-card h3 {
-      font-family: var(--serif);
-      font-size: 25px; font-weight: 400;
-      color: var(--white);
-      margin-bottom: 14px; line-height: 1.2;
+      font-family: var(--serif); font-size: 22px; font-weight: 400;
+      color: #fff; margin-bottom: 12px; line-height: 1.2;
     }
-    .feat-card p { font-size: 15px; color: rgba(255,255,255,0.58); line-height: 1.7; }
+    .feat-card p { font-size: 14px; color: rgba(255,255,255,0.55); line-height: 1.7; }
 
-    /* ══════════════════════════════
-       SECTION: ABOUT
-    ══════════════════════════════ */
-    #about {
-      padding: 0;
-      background: var(--cream-mid);
-      overflow: hidden;
+    /* ═══════════════════════
+       HOW TO ORDER
+    ═══════════════════════ */
+    #how-to-order { padding: 88px 0; background: var(--white); }
+    .order-channel {
+      max-width: 680px; margin: 0 auto 52px;
+      background: var(--off-white); border: 1px solid var(--border);
+      padding: 28px 32px; text-align: center;
     }
-    .about-grid {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      min-height: 620px;
-    }
-    .about-text {
-      padding: 100px 72px;
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-    }
-    .about-text .section-title { color: var(--charcoal); margin-bottom: 26px; }
-    .about-text p {
-      font-size: 17px;
-      color: var(--charcoal-3);
-      line-height: 1.8;
-      margin-bottom: 14px;
-    }
-    .about-btns {
-      display: flex; gap: 18px; flex-wrap: wrap;
-      margin-top: 40px;
-    }
-    .about-img {
-      position: relative; overflow: hidden;
-    }
-    .about-img img {
-      width: 100%; height: 100%;
-      object-fit: cover;
-      transition: transform 0.7s var(--ease);
-    }
-    .about-img:hover img { transform: scale(1.04); }
+    .order-channel p { font-size: 15px; color: var(--text-lt); margin-bottom: 18px; }
+    .order-channel p strong { color: var(--charcoal); }
+    .order-channel-btns { display: flex; gap: 10px; justify-content: center; flex-wrap: wrap; }
+    .order-channel-btns .btn { font-size: 11px; padding: 11px 20px; }
 
-    /* ══════════════════════════════
-       SECTION: MADE IN INDIA
-    ══════════════════════════════ */
-    #origin {
-      padding: 80px 52px;
-      background: var(--walnut-2);
-      text-align: center;
+    .order-steps {
+      display: grid; grid-template-columns: repeat(4, 1fr);
+      gap: 1px; background: var(--border);
+      border: 1px solid var(--border);
+      max-width: var(--max); margin: 0 auto 36px;
     }
-    .origin-wrap {
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      gap: 56px;
+    .order-step { background: var(--white); padding: 32px 24px; }
+    .step-top { display: flex; align-items: center; gap: 12px; margin-bottom: 14px; }
+    .step-num {
+      width: 36px; height: 36px; border-radius: 50%;
+      background: var(--green-dk); color: #fff;
+      font-size: 14px; font-weight: 700;
+      display: flex; align-items: center; justify-content: center;
+      flex-shrink: 0;
+    }
+    .step-icon { font-size: 22px; }
+    .order-step h4 {
+      font-family: var(--serif); font-size: 16px; font-weight: 500;
+      color: var(--charcoal); margin-bottom: 8px;
+    }
+    .order-step p { font-size: 13px; color: var(--text-lt); line-height: 1.55; }
+    .order-step ul { margin-top: 8px; }
+    .order-step ul li {
+      font-size: 12px; color: var(--text-lt);
+      padding: 3px 0 3px 16px; position: relative; line-height: 1.4;
+    }
+    .order-step ul li::before { content: '•'; position: absolute; left: 5px; color: var(--gold); }
+
+    .order-note {
+      max-width: 680px; margin: 0 auto;
+      background: var(--off-white);
+      border-left: 3px solid var(--green-md);
+      padding: 18px 22px;
+      font-size: 14px; color: var(--text-lt);
+    }
+
+    /* ═══════════════════════
+       ABOUT
+    ═══════════════════════ */
+    #about { padding: 88px 0; background: var(--cream); }
+    .about-inner { max-width: 720px; margin: 0 auto; text-align: center; }
+    .about-inner p { font-size: 16px; color: var(--text-lt); line-height: 1.8; margin-bottom: 14px; }
+    .about-inner .care-note {
+      font-size: 13px; color: var(--text-lt);
+      border-top: 1px solid var(--border); padding-top: 14px; margin-top: 8px;
+    }
+    .about-btns { display: flex; gap: 12px; justify-content: center; flex-wrap: wrap; margin-top: 32px; }
+
+    /* ═══════════════════════
+       MADE IN INDIA
+    ═══════════════════════ */
+    #origin { padding: 60px 24px; background: var(--gold); }
+    .origin-inner {
+      max-width: var(--max); margin: 0 auto;
+      display: flex; align-items: center; justify-content: center;
+      gap: 48px; flex-wrap: wrap;
     }
     .india-flag {
       display: flex; flex-direction: column;
-      width: 52px; height: 36px;
+      width: 52px; height: 34px;
       overflow: hidden; border-radius: 2px;
       box-shadow: 0 2px 8px rgba(0,0,0,0.25);
     }
@@ -446,182 +400,205 @@
     .f-saffron { background: #FF9933; }
     .f-white   { background: #FFFFFF; }
     .f-green   { background: #138808; }
-    .flag-label {
-      font-size: 11px; font-weight: 500;
-      letter-spacing: 0.16em; text-transform: uppercase;
-      color: rgba(255,255,255,0.65);
-      margin-top: 10px;
-    }
-    .origin-divider { width: 1px; height: 64px; background: rgba(255,255,255,0.22); }
+    .flag-wrap { text-align: center; }
+    .flag-label { font-size: 10px; font-weight: 600; letter-spacing: 0.16em; text-transform: uppercase; color: rgba(255,255,255,0.75); margin-top: 8px; }
+    .origin-divider { width: 1px; height: 52px; background: rgba(255,255,255,0.28); }
     .origin-text h2 {
       font-family: var(--serif);
-      font-size: clamp(24px, 3.5vw, 42px);
-      font-weight: 400;
-      color: var(--white);
-      margin-bottom: 10px;
-      text-align: left;
+      font-size: clamp(22px, 3vw, 38px); font-weight: 400;
+      color: #fff; margin-bottom: 8px;
     }
-    .origin-text p {
-      font-size: 16px;
-      color: rgba(255,255,255,0.72);
-      max-width: 460px;
-      text-align: left;
-    }
+    .origin-text p { font-size: 15px; color: rgba(255,255,255,0.8); max-width: 440px; }
 
-    /* ══════════════════════════════
-       SECTION: CTA BANNER
-    ══════════════════════════════ */
-    #cta-banner {
-      position: relative;
-      padding: 160px 52px;
-      text-align: center;
-      overflow: hidden;
+    /* ═══════════════════════
+       FAQ
+    ═══════════════════════ */
+    #faq { padding: 88px 0; background: var(--white); }
+    .faq-list { max-width: 800px; margin: 0 auto; }
+    .faq-cat-label {
+      font-size: 10px; font-weight: 700;
+      letter-spacing: 0.22em; text-transform: uppercase;
+      color: var(--gold);
+      padding: 22px 0 8px;
+      border-top: 1px solid var(--border);
+      margin-top: 6px;
     }
-    .cta-bg {
-      position: absolute; inset: 0;
-      background-color: #150D08;
-      background-image: url('https://images.unsplash.com/photo-1504674900247-0877df9cc836?auto=format&fit=crop&w=1920&q=82');
-      background-size: cover;
-      background-position: center;
-      background-attachment: fixed;
+    .faq-cat-label:first-child { border-top: none; margin-top: 0; padding-top: 0; }
+    .faq-item { border-bottom: 1px solid var(--border); }
+    .faq-q {
+      width: 100%; text-align: left;
+      padding: 17px 0;
+      display: flex; align-items: center; justify-content: space-between; gap: 16px;
+      font-size: 15px; font-weight: 500; color: var(--charcoal);
+      background: none; border: none; cursor: pointer;
+      font-family: var(--sans); transition: color 0.2s;
     }
-    .cta-overlay {
-      position: absolute; inset: 0;
-      background: rgba(22, 14, 8, 0.72);
+    .faq-q:hover { color: var(--gold); }
+    .faq-q.open  { color: var(--gold); }
+    .faq-icon {
+      flex-shrink: 0; width: 22px; height: 22px;
+      border: 1.5px solid var(--border); border-radius: 50%;
+      display: flex; align-items: center; justify-content: center;
+      font-size: 14px; line-height: 1; color: var(--text-lt);
+      font-style: normal;
+      transition: all 0.25s;
     }
-    .cta-content { position: relative; z-index: 2; }
-    .cta-content h2 {
-      font-family: var(--serif);
-      font-size: clamp(34px, 5vw, 62px);
-      font-weight: 400;
-      color: var(--white);
-      letter-spacing: -0.02em;
-      margin-bottom: 22px;
-    }
-    .cta-content p {
-      font-size: 18px;
-      color: rgba(255,255,255,0.68);
-      max-width: 500px;
-      margin: 0 auto 40px;
-    }
+    .faq-q.open .faq-icon { border-color: var(--gold); color: var(--gold); transform: rotate(45deg); }
+    .faq-a { max-height: 0; overflow: hidden; transition: max-height 0.4s var(--ease); }
+    .faq-a.open { max-height: 600px; }
+    .faq-a-inner { padding: 0 0 16px; font-size: 14px; color: var(--text-lt); line-height: 1.7; }
+    .faq-a-inner a { color: var(--gold); text-decoration: underline; text-underline-offset: 3px; }
+    .faq-a-inner ul { padding-left: 18px; list-style: disc; margin-top: 6px; }
+    .faq-a-inner ul li { margin-bottom: 4px; }
 
-    /* ══════════════════════════════
-       SECTION: CONTACT
-    ══════════════════════════════ */
-    #contact {
-      padding: 110px 52px;
-      background: var(--cream);
-      text-align: center;
+    /* ═══════════════════════
+       CARE INSTRUCTIONS
+    ═══════════════════════ */
+    #care { padding: 88px 0; background: var(--off-white); }
+    .care-grid {
+      display: grid; grid-template-columns: repeat(3, 1fr);
+      gap: 1px; background: var(--border); border: 1px solid var(--border);
     }
-    #contact .section-title { color: var(--charcoal); margin-bottom: 12px; }
-    #contact .subtitle {
-      font-size: 17px;
-      color: var(--charcoal-3);
-      margin-bottom: 56px;
+    .care-col { background: var(--white); padding: 36px 28px; }
+    .care-col h3 {
+      font-family: var(--serif); font-size: 19px; font-weight: 500;
+      color: var(--charcoal); margin-bottom: 18px;
     }
+    .care-col > p { font-size: 14px; color: var(--text-lt); line-height: 1.7; margin-bottom: 14px; }
+    .care-col ul li {
+      font-size: 13px; color: var(--text-lt);
+      padding: 6px 0 6px 18px; position: relative;
+      border-bottom: 1px solid var(--cream); line-height: 1.55;
+    }
+    .care-col ul li:last-child { border-bottom: none; }
+    .care-col ul li::before { content: '•'; position: absolute; left: 5px; color: var(--gold); }
+    .care-btns { display: flex; gap: 10px; flex-wrap: wrap; margin-top: 18px; }
+    .care-btns .btn { font-size: 11px; padding: 10px 16px; }
+
+    /* ═══════════════════════
+       TERMS & CONDITIONS
+    ═══════════════════════ */
+    #terms { padding: 88px 0; background: var(--white); }
+    .terms-inner { max-width: 800px; margin: 0 auto; }
+    .terms-item { border-bottom: 1px solid var(--border); padding: 20px 0; }
+    .terms-item:first-child { border-top: 1px solid var(--border); }
+    .terms-item h4 {
+      font-size: 14px; font-weight: 600; color: var(--charcoal);
+      margin-bottom: 8px; display: flex; align-items: baseline; gap: 10px;
+    }
+    .t-num { font-size: 10px; color: var(--gold); font-weight: 700; letter-spacing: 0.08em; flex-shrink: 0; }
+    .terms-item p { font-size: 13px; color: var(--text-lt); line-height: 1.7; }
+    .terms-item ul { padding-left: 18px; list-style: disc; margin-top: 6px; }
+    .terms-item ul li { font-size: 13px; color: var(--text-lt); line-height: 1.65; margin-bottom: 4px; }
+
+    /* ═══════════════════════
+       CONTACT
+    ═══════════════════════ */
+    #contact { padding: 88px 0; background: var(--off-white); text-align: center; }
+    .contact-channels {
+      display: flex; gap: 16px; justify-content: center; flex-wrap: wrap;
+      margin: 0 auto 52px; max-width: 720px;
+    }
+    .contact-channel {
+      flex: 1; min-width: 180px;
+      background: var(--white); border: 1px solid var(--border);
+      padding: 26px 20px; text-align: center;
+    }
+    .ch-icon { font-size: 26px; margin-bottom: 10px; }
+    .contact-channel h4 {
+      font-size: 12px; font-weight: 600;
+      letter-spacing: 0.12em; text-transform: uppercase;
+      color: var(--charcoal); margin-bottom: 6px;
+    }
+    .contact-channel p { font-size: 13px; color: var(--text-lt); }
+    .contact-channel a {
+      display: inline-block; margin-top: 12px;
+      font-size: 12px; font-weight: 600; letter-spacing: 0.08em; text-transform: uppercase;
+      color: var(--gold); border-bottom: 1px solid transparent; transition: border-color 0.2s;
+    }
+    .contact-channel a:hover { border-color: var(--gold); }
     .contact-form {
-      max-width: 540px;
-      margin: 0 auto;
-      display: flex;
-      flex-direction: column;
-      gap: 18px;
-      text-align: left;
+      max-width: 520px; margin: 0 auto;
+      display: flex; flex-direction: column; gap: 14px; text-align: left;
     }
-    .form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 18px; }
+    .form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; }
     .contact-form input,
     .contact-form textarea {
-      width: 100%;
-      padding: 16px 20px;
-      border: 1px solid var(--cream-dark);
-      background: var(--white);
-      color: var(--charcoal);
-      font-family: var(--sans);
-      font-size: 15px;
-      outline: none;
-      border-radius: 0;
-      -webkit-appearance: none;
-      transition: border-color 0.3s;
+      width: 100%; padding: 13px 16px;
+      border: 1px solid var(--border); background: var(--white);
+      color: var(--text); font-family: var(--sans); font-size: 14px;
+      outline: none; transition: border-color 0.25s;
     }
     .contact-form input:focus,
-    .contact-form textarea:focus { border-color: var(--walnut); }
+    .contact-form textarea:focus { border-color: var(--gold); }
     .contact-form input::placeholder,
-    .contact-form textarea::placeholder { color: rgba(107,93,85,0.45); font-size: 14px; }
-    .contact-form textarea { height: 140px; resize: none; }
-    .contact-form .btn-dark { align-self: center; border: none; }
+    .contact-form textarea::placeholder { color: rgba(107,93,85,0.4); }
+    .contact-form textarea { height: 130px; resize: none; }
+    .contact-form .btn-dark { align-self: center; }
 
-    /* ══════════════════════════════
+    /* ═══════════════════════
        FOOTER
-    ══════════════════════════════ */
-    footer {
-      background: var(--charcoal);
-      padding: 72px 52px 40px;
-    }
+    ═══════════════════════ */
+    footer { background: var(--charcoal); padding: 64px 48px 36px; }
     .footer-grid {
-      max-width: var(--max);
-      margin: 0 auto;
-      display: grid;
-      grid-template-columns: 2fr 1fr 1fr;
-      gap: 56px;
-      padding-bottom: 52px;
-      border-bottom: 1px solid rgba(255,255,255,0.09);
-      margin-bottom: 32px;
+      max-width: var(--max); margin: 0 auto;
+      display: grid; grid-template-columns: 2fr 1fr 1fr 1fr;
+      gap: 48px;
+      padding-bottom: 48px; border-bottom: 1px solid rgba(255,255,255,0.08); margin-bottom: 28px;
     }
     .footer-brand h3 {
-      font-family: var(--serif);
-      font-size: 24px; font-weight: 400;
-      color: var(--white);
-      margin-bottom: 14px;
+      font-family: var(--serif); font-size: 21px; font-weight: 400;
+      color: #fff; margin-bottom: 12px;
     }
-    .footer-brand p {
-      font-size: 14px;
-      color: rgba(255,255,255,0.45);
-      line-height: 1.7;
-      max-width: 300px;
+    .footer-brand p { font-size: 13px; color: rgba(255,255,255,0.42); line-height: 1.7; max-width: 280px; }
+    .footer-social { display: flex; gap: 10px; margin-top: 18px; }
+    .footer-social a {
+      font-size: 11px; font-weight: 600; letter-spacing: 0.08em; text-transform: uppercase;
+      color: rgba(255,255,255,0.5); padding: 6px 12px;
+      border: 1px solid rgba(255,255,255,0.12); transition: all 0.25s;
     }
+    .footer-social a:hover { color: #fff; border-color: rgba(255,255,255,0.3); }
     .footer-col h4 {
-      font-size: 10px;
-      font-weight: 500;
-      letter-spacing: 0.2em;
-      text-transform: uppercase;
-      color: var(--gold);
-      margin-bottom: 20px;
+      font-size: 10px; font-weight: 600; letter-spacing: 0.2em; text-transform: uppercase;
+      color: var(--gold); margin-bottom: 18px;
     }
-    .footer-col ul { list-style: none; display: flex; flex-direction: column; gap: 12px; }
-    .footer-col ul li a { font-size: 14px; color: rgba(255,255,255,0.45); transition: color 0.3s; }
-    .footer-col ul li a:hover { color: var(--white); }
+    .footer-col ul { display: flex; flex-direction: column; gap: 10px; }
+    .footer-col ul li a { font-size: 13px; color: rgba(255,255,255,0.42); transition: color 0.25s; }
+    .footer-col ul li a:hover { color: #fff; }
     .footer-bottom {
       max-width: var(--max); margin: 0 auto;
       display: flex; align-items: center; justify-content: space-between;
     }
-    .footer-bottom p { font-size: 13px; color: rgba(255,255,255,0.28); }
+    .footer-bottom p { font-size: 12px; color: rgba(255,255,255,0.25); }
 
-    /* ══════════════════════════════
+    /* ═══════════════════════
        RESPONSIVE
-    ══════════════════════════════ */
+    ═══════════════════════ */
     @media (max-width: 1024px) {
-      .use-grid { grid-template-columns: repeat(3, 1fr); }
+      .certified-grid { grid-template-columns: 1fr; gap: 40px; }
+      .care-grid { grid-template-columns: 1fr; }
+      .footer-grid { grid-template-columns: 1fr 1fr; }
+      .order-steps { grid-template-columns: repeat(2, 1fr); }
     }
     @media (max-width: 900px) {
-      #nav, #nav.scrolled { padding: 18px 24px; }
+      #nav, #nav.scrolled { padding: 14px 20px; }
       .nav-links { display: none; }
-      section, #perfect-for, #features, #contact { padding: 72px 24px; }
-      .use-grid { grid-template-columns: repeat(2, 1fr); }
       .feat-grid { grid-template-columns: 1fr; }
-      .about-grid { grid-template-columns: 1fr; }
-      .about-img  { height: 380px; }
-      .about-text { padding: 60px 28px; }
-      .origin-wrap { flex-direction: column; text-align: center; gap: 28px; }
-      .origin-divider { display: none; }
-      .origin-text h2, .origin-text p { text-align: center; }
-      #cta-banner { padding: 120px 24px; }
-      .footer-grid { grid-template-columns: 1fr; gap: 40px; }
-      .footer-bottom { flex-direction: column; gap: 10px; text-align: center; }
-      .form-row { grid-template-columns: 1fr; }
+      .cert-uses-grid { grid-template-columns: 1fr 1fr; }
     }
-    @media (max-width: 520px) {
-      .hero-content h1 { font-size: 36px; }
+    @media (max-width: 680px) {
+      .order-steps { grid-template-columns: 1fr; }
+      .cert-checks { grid-template-columns: 1fr; }
+      .nav-ctas .nav-wa { display: none; }
+      .footer-grid { grid-template-columns: 1fr; gap: 32px; }
+      .footer-bottom { flex-direction: column; gap: 8px; text-align: center; }
+      .form-row { grid-template-columns: 1fr; }
+      .contact-channels { flex-direction: column; }
+    }
+    @media (max-width: 480px) {
+      .hero-content h1 { font-size: 34px; }
       .hero-btns { flex-direction: column; align-items: center; }
-      .about-btns { flex-direction: column; }
+      .about-btns, .cert-btns { flex-direction: column; align-items: flex-start; }
     }
   </style>
 </head>
@@ -631,11 +608,15 @@
 <nav id="nav">
   <a href="#" class="nav-logo">ROTI EASE</a>
   <ul class="nav-links">
-    <li><a href="#perfect-for">Products</a></li>
-    <li><a href="#about">Our Story</a></li>
+    <li><a href="#certified">Product</a></li>
+    <li><a href="#how-to-order">How to Order</a></li>
+    <li><a href="#faq">FAQ</a></li>
     <li><a href="#contact">Contact</a></li>
   </ul>
-  <a href="https://www.amazon.in/gp/product/B0H49NRR3V/ref=cx_skuctr_share?smid=A1RUQA1NM49FOQ" class="nav-shop" target="_blank" rel="noopener">Buy on Amazon</a>
+  <div class="nav-ctas">
+    <a href="https://www.amazon.in/gp/product/B0H49NRR3V/ref=cx_skuctr_share?smid=A1RUQA1NM49FOQ" class="nav-amazon" target="_blank" rel="noopener">🛒 Amazon</a>
+    <a href="https://wa.me/918147496263" class="nav-wa" target="_blank" rel="noopener">💬 WhatsApp</a>
+  </div>
 </nav>
 
 <!-- ═══ HERO ═══ -->
@@ -643,13 +624,12 @@
   <div class="hero-bg" id="heroBg"></div>
   <div class="hero-overlay"></div>
   <div class="hero-content">
-    <span class="hero-eyebrow">ROTI EASE — Multi-Purpose Non-Stick Rolling Mat</span>
-    <h1>Where tradition meets<br>effortless cooking.</h1>
-    <p class="hero-p">Premium silicone kitchen essentials designed for everyday Indian cooking.</p>
-    <p class="hero-p hero-sub">Timeless tools for modern homes.</p>
+    <span class="hero-eyebrow">By Rollio Kitchen · Made in India</span>
+    <h1>Roll perfect rotis.<br>Every single time.</h1>
+    <p class="hero-p">Premium 100% food-grade silicone rolling mat — non-stick, BPA free, Teflon free. Designed for everyday Indian cooking.</p>
     <div class="hero-btns">
-      <a href="https://www.amazon.in/gp/product/B0H49NRR3V/ref=cx_skuctr_share?smid=A1RUQA1NM49FOQ" class="btn btn-amazon" target="_blank" rel="noopener"><span class="amz-icon">🛒</span> Buy on Amazon</a>
-      <a href="#perfect-for"  class="btn btn-ghost">Discover More</a>
+      <a href="https://www.amazon.in/gp/product/B0H49NRR3V/ref=cx_skuctr_share?smid=A1RUQA1NM49FOQ" class="btn btn-amazon" target="_blank" rel="noopener">🛒 Buy on Amazon</a>
+      <a href="https://wa.me/918147496263" class="btn btn-whatsapp" target="_blank" rel="noopener">💬 Order on WhatsApp</a>
     </div>
   </div>
   <div class="scroll-hint">
@@ -658,79 +638,65 @@
   </div>
 </section>
 
-<!-- ═══ PERFECT FOR ═══ -->
-<section id="perfect-for">
+<!-- ═══ TRUST BADGES ═══ -->
+<div id="badges">
+  <div class="badges-row">
+    <span class="badge-item">✅ Food Grade Certified</span>
+    <span class="badge-sep">|</span>
+    <span class="badge-item">✅ BPA Free</span>
+    <span class="badge-sep">|</span>
+    <span class="badge-item">✅ Non-Toxic &amp; Odorless</span>
+    <span class="badge-sep">|</span>
+    <span class="badge-item">✅ Teflon Free</span>
+    <span class="badge-sep">|</span>
+    <span class="badge-item">✅ Reusable &amp; Durable</span>
+    <span class="badge-sep">|</span>
+    <span class="badge-item">✅ Heat Resistant to 230°C</span>
+  </div>
+</div>
+
+<!-- ═══ CERTIFIED / PRODUCT ═══ -->
+<section id="certified">
   <div class="container">
-    <div class="fade">
-      <span class="label">Designed for versatility</span>
-      <h2 class="section-title">Perfect for every occasion.</h2>
-      <p class="intro">From morning rotis to weekend baking — one surface covers it all.</p>
-    </div>
-    <div class="use-grid fade d2">
-      <div class="use-card">
-        <div class="use-icon">🫓</div>
-        <h3>Chapathi / Roti</h3>
-        <p>Phulka, Puranpoli — smooth even rolling, no sticking, no extra flour needed.</p>
+    <div class="certified-grid fade">
+      <div class="cert-text">
+        <span class="eyebrow">🌟 Certified Roti Ease</span>
+        <h2>Perfect for Holige, Akki Rotti, Ragi Rotti &amp; more.</h2>
+        <p>Tired of messy kitchen counters? ROTI EASE is an 11-inch round food-grade silicone mat that lets you spread Akki Rotti and Ragi Rotti directly on the mat and transfer to the tawa with ease. Make soft Holige and Puran Poli without sticking or tearing.</p>
+        <p class="cert-highlight">❌ No more flour-covered counters &nbsp;·&nbsp; ❌ No more difficult cleanup after cooking<br>✔️ Just roll, peel, cook and wash!</p>
+        <div class="cert-checks">
+          <div class="cert-check"><span class="tick">✔</span><span>Food Grade Certified Silicone</span></div>
+          <div class="cert-check"><span class="tick">✔</span><span>BPA Free</span></div>
+          <div class="cert-check"><span class="tick">✔</span><span>Non-Toxic &amp; Odorless</span></div>
+          <div class="cert-check"><span class="tick">✔</span><span>Teflon Free</span></div>
+          <div class="cert-check"><span class="tick">✔</span><span>Reusable &amp; Easy to Clean</span></div>
+          <div class="cert-check"><span class="tick">✔</span><span>Flexible &amp; Durable</span></div>
+          <div class="cert-check"><span class="tick">✔</span><span>Heat Resistant up to 230°C</span></div>
+          <div class="cert-check"><span class="tick">✔</span><span>11 Inch Round · Made in India</span></div>
+        </div>
+        <div class="cert-btns">
+          <a href="https://www.amazon.in/gp/product/B0H49NRR3V/ref=cx_skuctr_share?smid=A1RUQA1NM49FOQ" class="btn btn-amazon" target="_blank" rel="noopener">🛒 Buy on Amazon</a>
+          <a href="https://wa.me/918147496263" class="btn btn-whatsapp" target="_blank" rel="noopener">💬 Order on WhatsApp</a>
+        </div>
       </div>
-      <div class="use-card">
-        <div class="use-icon">🥙</div>
-        <h3>Paratha</h3>
-        <p>Plain &amp; stuffed — handle soft filled doughs with confidence every time.</p>
+      <div class="cert-uses fade d2">
+        <h3>✨ One mat. Endless creations.</h3>
+        <div class="cert-uses-grid">
+          <div class="cert-use-item"><span class="use-em">🫓</span><span>Chapathi &amp; Roti</span></div>
+          <div class="cert-use-item"><span class="use-em">🫔</span><span>Puran Poli / Holige</span></div>
+          <div class="cert-use-item"><span class="use-em">🥙</span><span>Paratha</span></div>
+          <div class="cert-use-item"><span class="use-em">🍞</span><span>Poori &amp; Bhakri</span></div>
+          <div class="cert-use-item"><span class="use-em">🌾</span><span>Akki Rotti</span></div>
+          <div class="cert-use-item"><span class="use-em">🌿</span><span>Ragi Rotti</span></div>
+          <div class="cert-use-item"><span class="use-em">🥟</span><span>Momos &amp; Dumplings</span></div>
+          <div class="cert-use-item"><span class="use-em">🥐</span><span>Samosa Sheets</span></div>
+          <div class="cert-use-item"><span class="use-em">🍕</span><span>Pizza Dough</span></div>
+          <div class="cert-use-item"><span class="use-em">🌮</span><span>Tortillas &amp; Wraps</span></div>
+          <div class="cert-use-item"><span class="use-em">🍪</span><span>Cookie Dough</span></div>
+          <div class="cert-use-item"><span class="use-em">🎂</span><span>Fondant &amp; Pastry</span></div>
+        </div>
+        <p style="font-size:12px;color:var(--text-lt);margin-top:12px;font-style:italic;">📏 Size: 11 Inch Round Mat &nbsp;·&nbsp; Made in India</p>
       </div>
-      <div class="use-card">
-        <div class="use-icon">🍞</div>
-        <h3>Poori &amp; Bhakri</h3>
-        <p>Thepla, South Indian rotti — roll to perfect thickness effortlessly.</p>
-      </div>
-      <div class="use-card">
-        <div class="use-icon">🥟</div>
-        <h3>Momos &amp; Dumplings</h3>
-        <p>Thin, even dumpling wrappers — perfect folds every time.</p>
-      </div>
-      <div class="use-card">
-        <div class="use-icon">🥐</div>
-        <h3>Samosa Sheets</h3>
-        <p>Spring roll sheets — crisp, even layers with no tearing.</p>
-      </div>
-      <div class="use-card">
-        <div class="use-icon">🫙</div>
-        <h3>Papdi &amp; Mathri</h3>
-        <p>Crispy tea-time snacks rolled to consistent, even thickness.</p>
-      </div>
-      <div class="use-card">
-        <div class="use-icon">🍕</div>
-        <h3>Pizza Dough</h3>
-        <p>Stretch thin crusts cleanly — from roti to pizza, one mat does it all.</p>
-      </div>
-      <div class="use-card">
-        <div class="use-icon">🌮</div>
-        <h3>Tortillas &amp; Wraps</h3>
-        <p>Even, smooth flatbreads — roll out wraps of any thickness with ease.</p>
-      </div>
-      <div class="use-card">
-        <div class="use-icon">🥧</div>
-        <h3>Puff Pastry</h3>
-        <p>Pie crusts &amp; flaky layers — delicate pastry stays intact from prep to oven.</p>
-      </div>
-      <div class="use-card">
-        <div class="use-icon">🍪</div>
-        <h3>Cookie Dough</h3>
-        <p>Cut-out shapes, no mess — delicate doughs stay intact from shaping to baking.</p>
-      </div>
-      <div class="use-card">
-        <div class="use-icon">🎂</div>
-        <h3>Sugar Cookies &amp; Fondant</h3>
-        <p>Decoration work made clean — fondant rolls smooth without sticking.</p>
-      </div>
-      <div class="use-card">
-        <div class="use-icon">🍬</div>
-        <h3>Marzipan</h3>
-        <p>Sculpt and shape confectionery cleanly — flexible surface, zero residue.</p>
-      </div>
-    </div>
-    <div class="one-surface fade d3">
-      <p class="tagline">"One surface. Endless creations."</p>
-      <span class="sub">Designed for everyday versatility.</span>
     </div>
   </div>
 </section>
@@ -738,96 +704,472 @@
 <!-- ═══ FEATURES ═══ -->
 <section id="features">
   <div class="container">
-    <div class="features-head fade">
-      <span class="label">Why ROTI EASE</span>
-      <h2 class="section-title" style="color:var(--white)">Crafted for the way you cook.</h2>
+    <div class="sec-head features-head fade">
+      <span class="eyebrow" style="color:rgba(196,144,58,0.9)">Why ROTI EASE</span>
+      <h2 class="sec-title" style="color:#fff">Crafted for the way you cook.</h2>
+      <div class="sec-rule"></div>
     </div>
     <div class="feat-grid">
       <div class="feat-card fade d1">
         <div class="feat-num">01</div>
         <div class="feat-line"></div>
         <h3>Non-Stick Surface</h3>
-        <p>A smooth surface that lets dough glide effortlessly — no extra flour needed. Roll thin or thick, it moves with you. Flexible, durable &amp; long-lasting.</p>
+        <p>Smooth surface lets dough glide effortlessly — no extra flour needed. Roll thin or thick, it moves with you. Flexible, durable &amp; long-lasting.</p>
       </div>
       <div class="feat-card fade d2">
         <div class="feat-num">02</div>
         <div class="feat-line"></div>
         <h3>100% Food-Grade Silicone</h3>
-        <p>BPA free. Teflon free. Non-toxic &amp; odorless. Heat resistant up to 230°C. Safe for everyday cooking and direct food contact — at home or in professional kitchens.</p>
+        <p>BPA free. Teflon free. Non-toxic &amp; odorless. Heat resistant up to 230°C. Safe for everyday cooking and direct food contact.</p>
       </div>
       <div class="feat-card fade d3">
         <div class="feat-num">03</div>
         <div class="feat-line"></div>
         <h3>Effortless Cleanup</h3>
-        <p>Easy to clean &amp; reusable. Clean with mild soap &amp; water and dry immediately. A quick rinse is all it takes — spend more time at the table, less time scrubbing.</p>
+        <p>Easy to clean &amp; reusable. A quick rinse with mild soap and water is all it takes. Spend more time at the table, less time scrubbing.</p>
       </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ HOW TO ORDER ═══ -->
+<section id="how-to-order">
+  <div class="container">
+    <div class="sec-head fade">
+      <span class="eyebrow">Easy Ordering</span>
+      <h2 class="sec-title">How to Order ROTI EASE</h2>
+      <p class="sec-sub">Easy steps to get your ROTIEASE Silicone Mat at your doorstep!</p>
+      <div class="sec-rule"></div>
+    </div>
+    <div class="order-channel fade d1">
+      <p>Place your order via <strong>Instagram DM</strong> or <strong>WhatsApp</strong></p>
+      <div class="order-channel-btns">
+        <a href="https://wa.me/918147496263" class="btn btn-whatsapp" target="_blank" rel="noopener">💬 WhatsApp: 8147496263</a>
+        <a href="https://www.instagram.com/rolliokitchen" class="btn btn-dark" target="_blank" rel="noopener">📸 @rolliokitchen</a>
+        <a href="https://www.amazon.in/gp/product/B0H49NRR3V/ref=cx_skuctr_share?smid=A1RUQA1NM49FOQ" class="btn btn-amazon" target="_blank" rel="noopener">🛒 Buy on Amazon</a>
+      </div>
+    </div>
+    <div class="order-steps fade d2">
+      <div class="order-step">
+        <div class="step-top">
+          <span class="step-num">1</span>
+          <span class="step-icon">📍</span>
+        </div>
+        <h4>Share your Pincode</h4>
+        <p>Send us your delivery pincode so we can confirm availability and shipping to your area.</p>
+      </div>
+      <div class="order-step">
+        <div class="step-top">
+          <span class="step-num">2</span>
+          <span class="step-icon">🚚</span>
+        </div>
+        <h4>Confirm Charges</h4>
+        <p>We will confirm the delivery charges and total amount for your order.</p>
+      </div>
+      <div class="order-step">
+        <div class="step-top">
+          <span class="step-num">3</span>
+          <span class="step-icon">📱</span>
+        </div>
+        <h4>Make Payment</h4>
+        <p>Make the payment using our QR Code. Quick, easy and secure.</p>
+      </div>
+      <div class="order-step">
+        <div class="step-top">
+          <span class="step-num">4</span>
+          <span class="step-icon">📋</span>
+        </div>
+        <h4>Share Your Details</h4>
+        <p>After payment, please share:</p>
+        <ul>
+          <li>Payment Screenshot</li>
+          <li>Full Name</li>
+          <li>Complete Delivery Address</li>
+          <li>Pincode</li>
+          <li>Mobile Number</li>
+        </ul>
+      </div>
+    </div>
+    <div class="order-note fade d3">
+      📦 Once we receive your payment and details, your order will be processed and dispatched promptly. Orders are usually dispatched within 1–2 business days.
     </div>
   </div>
 </section>
 
 <!-- ═══ ABOUT ═══ -->
 <section id="about">
-  <div class="about-text fade" style="padding:100px 72px;max-width:760px;margin:0 auto;">
-    <span class="label">Our Story</span>
-    <h2 class="section-title">Cooking brings<br>people together.</h2>
-    <p>At ROTI EASE, we create thoughtfully designed kitchen essentials that make everyday Indian cooking cleaner, easier, and more enjoyable.</p>
-    <p>From soft rotis to festive pastries, our products are crafted to support the moments that happen around the kitchen table.</p>
-    <p style="font-size:14px;color:var(--charcoal-3);margin-top:4px;">Care: wash before first use · avoid direct flame · clean with mild soap &amp; water · do not use sharp objects · store in a dry place.</p>
-    <div class="about-btns">
-      <a href="https://www.amazon.in/gp/product/B0H49NRR3V/ref=cx_skuctr_share?smid=A1RUQA1NM49FOQ" class="btn btn-amazon" target="_blank" rel="noopener"><span class="amz-icon">🛒</span> Buy on Amazon</a>
-      <a href="#perfect-for" class="btn btn-outline">Explore the Range</a>
+  <div class="container">
+    <div class="about-inner fade">
+      <span class="eyebrow" style="display:block;text-align:center">Our Story</span>
+      <h2 class="sec-title">Cooking brings<br>people together.</h2>
+      <div class="sec-rule"></div>
+      <p style="margin-top:28px">At ROTI EASE, we create thoughtfully designed kitchen essentials that make everyday Indian cooking cleaner, easier, and more enjoyable.</p>
+      <p>From soft rotis to festive pastries, our products are crafted to support the moments that happen around the kitchen table.</p>
+      <p class="care-note">Care: wash before first use · avoid direct flame · clean with mild soap &amp; water · do not use sharp objects · store in a dry place.</p>
+      <div class="about-btns">
+        <a href="https://www.amazon.in/gp/product/B0H49NRR3V/ref=cx_skuctr_share?smid=A1RUQA1NM49FOQ" class="btn btn-amazon" target="_blank" rel="noopener">🛒 Buy on Amazon</a>
+        <a href="https://wa.me/918147496263" class="btn btn-whatsapp" target="_blank" rel="noopener">💬 Order on WhatsApp</a>
+      </div>
     </div>
   </div>
 </section>
 
 <!-- ═══ MADE IN INDIA ═══ -->
 <section id="origin">
-  <div class="container">
-    <div class="origin-wrap fade">
-      <div>
-        <div class="india-flag">
-          <span class="f-saffron"></span>
-          <span class="f-white"></span>
-          <span class="f-green"></span>
-        </div>
-        <div class="flag-label">Made in India</div>
+  <div class="origin-inner fade">
+    <div class="flag-wrap">
+      <div class="india-flag">
+        <span class="f-saffron"></span>
+        <span class="f-white"></span>
+        <span class="f-green"></span>
       </div>
-      <div class="origin-divider"></div>
-      <div class="origin-text">
-        <h2>Proudly made in India.</h2>
-        <p>Created for traditional and modern kitchens, cooking styles, and traditions. Designed for the way Indian families cook every day.</p>
+      <div class="flag-label">Made in India</div>
+    </div>
+    <div class="origin-divider"></div>
+    <div class="origin-text">
+      <h2>Proudly made in India.</h2>
+      <p>Designed for traditional and modern kitchens. Perfect for the way Indian families cook every day. Marketed by Rollio Kitchen — Nayaka Enterprises.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ FAQ ═══ -->
+<section id="faq">
+  <div class="container">
+    <div class="sec-head fade">
+      <span class="eyebrow">Got Questions?</span>
+      <h2 class="sec-title">Frequently Asked Questions</h2>
+      <div class="sec-rule"></div>
+    </div>
+    <div class="faq-list">
+
+      <div class="faq-cat-label">About the Product</div>
+
+      <div class="faq-item">
+        <button class="faq-q" aria-expanded="false">Is it made in India? <span class="faq-icon">+</span></button>
+        <div class="faq-a"><div class="faq-a-inner">Yes, proudly made in India.</div></div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q" aria-expanded="false">What is it made of? <span class="faq-icon">+</span></button>
+        <div class="faq-a"><div class="faq-a-inner">100% food-grade, BPA-free silicone.</div></div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q" aria-expanded="false">Is it safe for food? <span class="faq-icon">+</span></button>
+        <div class="faq-a"><div class="faq-a-inner">Yes, it is food-safe, Teflon free, non-toxic, and odorless.</div></div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q" aria-expanded="false">Does it contain harmful chemicals? <span class="faq-icon">+</span></button>
+        <div class="faq-a"><div class="faq-a-inner">No. It is 100% food-grade silicone, BPA-free, Teflon-free, non-toxic, odorless, and food-safe.</div></div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q" aria-expanded="false">What is the size of ROTI EASE? <span class="faq-icon">+</span></button>
+        <div class="faq-a"><div class="faq-a-inner">11.5 inches (approximately 29 cm) in diameter.</div></div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q" aria-expanded="false">What is the thickness of the mat? <span class="faq-icon">+</span></button>
+        <div class="faq-a"><div class="faq-a-inner">Approximately 1 mm.</div></div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q" aria-expanded="false">Is it flexible? <span class="faq-icon">+</span></button>
+        <div class="faq-a"><div class="faq-a-inner">Yes, it is soft, flexible, and easy to roll or fold for storage.</div></div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q" aria-expanded="false">Is it heat resistant? <span class="faq-icon">+</span></button>
+        <div class="faq-a"><div class="faq-a-inner">Yes, up to 230°C.</div></div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q" aria-expanded="false">How long does it last? <span class="faq-icon">+</span></button>
+        <div class="faq-a"><div class="faq-a-inner">With proper care, ROTI EASE is designed for years of regular use.</div></div>
+      </div>
+
+      <div class="faq-cat-label">Usage &amp; Compatibility</div>
+
+      <div class="faq-item">
+        <button class="faq-q" aria-expanded="false">What can I make with it? <span class="faq-icon">+</span></button>
+        <div class="faq-a"><div class="faq-a-inner">Rotis, puranpoli, chapatis, parathas, pooris, Holige, Akki Rotti, Ragi Rotti, pizza, cookies, fondant, momos, samosas, tortillas, and more.</div></div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q" aria-expanded="false">Is it suitable for Indian cooking? <span class="faq-icon">+</span></button>
+        <div class="faq-a"><div class="faq-a-inner">Absolutely! It's perfect for rotis, chapatis, parathas, pooris, puran poli, akki rotti, thepla, and many other Indian flatbreads.</div></div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q" aria-expanded="false">Does dough stick to the mat? <span class="faq-icon">+</span></button>
+        <div class="faq-a"><div class="faq-a-inner">No, the non-stick surface helps dough roll smoothly.</div></div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q" aria-expanded="false">Do I need extra flour? <span class="faq-icon">+</span></button>
+        <div class="faq-a"><div class="faq-a-inner">Very little or none in most cases.</div></div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q" aria-expanded="false">Can I use a rolling pin on it? <span class="faq-icon">+</span></button>
+        <div class="faq-a"><div class="faq-a-inner">Yes, it is specifically designed for use with rolling pins.</div></div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q" aria-expanded="false">Can I use it for sticky dough? <span class="faq-icon">+</span></button>
+        <div class="faq-a"><div class="faq-a-inner">Yes, it's suitable for sticky doughs like pizza dough, cookie dough, and fondant.</div></div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q" aria-expanded="false">Can I use oil on the mat? <span class="faq-icon">+</span></button>
+        <div class="faq-a"><div class="faq-a-inner">Yes, but in most cases the non-stick surface requires little or no oil.</div></div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q" aria-expanded="false">Will it curl while rolling dough? <span class="faq-icon">+</span></button>
+        <div class="faq-a"><div class="faq-a-inner">No, when placed on a clean, dry countertop, it stays stable during use.</div></div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q" aria-expanded="false">Can I use it for baking preparation? <span class="faq-icon">+</span></button>
+        <div class="faq-a"><div class="faq-a-inner">Yes, it's great for preparing dough before transferring it to a baking tray.</div></div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q" aria-expanded="false">Can I use it in professional kitchens? <span class="faq-icon">+</span></button>
+        <div class="faq-a"><div class="faq-a-inner">Yes, it's suitable for both home and commercial use.</div></div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q" aria-expanded="false">Can I cut directly on the mat? <span class="faq-icon">+</span></button>
+        <div class="faq-a"><div class="faq-a-inner">No, avoid sharp knives and cutters on the mat.</div></div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q" aria-expanded="false">Can I use it on direct flame? <span class="faq-icon">+</span></button>
+        <div class="faq-a"><div class="faq-a-inner">No, keep it away from open flames.</div></div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q" aria-expanded="false">Can I use both sides of the mat? <span class="faq-icon">+</span></button>
+        <div class="faq-a"><div class="faq-a-inner">Yes, both sides are usable if kept clean.</div></div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q" aria-expanded="false">Can children use it? <span class="faq-icon">+</span></button>
+        <div class="faq-a"><div class="faq-a-inner">Yes, with adult supervision, it's a great tool for kids learning to bake.</div></div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q" aria-expanded="false">Will it absorb food odors or stains? <span class="faq-icon">+</span></button>
+        <div class="faq-a"><div class="faq-a-inner">No, the high-quality silicone is odor-resistant and stain-resistant with proper care.</div></div>
+      </div>
+
+      <div class="faq-cat-label">Care &amp; Maintenance</div>
+
+      <div class="faq-item">
+        <button class="faq-q" aria-expanded="false">Is it easy to clean? <span class="faq-icon">+</span></button>
+        <div class="faq-a"><div class="faq-a-inner">Yes, just wash with mild soap and water.</div></div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q" aria-expanded="false">Is it reusable? <span class="faq-icon">+</span></button>
+        <div class="faq-a"><div class="faq-a-inner">Yes, it's durable and designed for daily use.</div></div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q" aria-expanded="false">Is it dishwasher safe? <span class="faq-icon">+</span></button>
+        <div class="faq-a"><div class="faq-a-inner">No. Hand wash only with mild soap and water. Dry thoroughly before storing.</div></div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q" aria-expanded="false">How should I store it? <span class="faq-icon">+</span></button>
+        <div class="faq-a"><div class="faq-a-inner">Clean, dry, and store flat or rolled in a dry place.</div></div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q" aria-expanded="false">Is it eco-friendly? <span class="faq-icon">+</span></button>
+        <div class="faq-a"><div class="faq-a-inner">Yes. Being reusable, it helps reduce the use of disposable baking paper and plastic sheets.</div></div>
+      </div>
+
+      <div class="faq-cat-label">Ordering &amp; Purchase</div>
+
+      <div class="faq-item">
+        <button class="faq-q" aria-expanded="false">Where can I buy ROTI EASE? <span class="faq-icon">+</span></button>
+        <div class="faq-a"><div class="faq-a-inner">You can order online through <a href="https://www.amazon.in/gp/product/B0H49NRR3V/ref=cx_skuctr_share?smid=A1RUQA1NM49FOQ" target="_blank" rel="noopener">Amazon</a>, or place an order via <a href="https://wa.me/918147496263" target="_blank" rel="noopener">WhatsApp (8147496263)</a> or Instagram DM <a href="https://www.instagram.com/rolliokitchen" target="_blank" rel="noopener">@rolliokitchen</a>.</div></div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q" aria-expanded="false">Do you offer wholesale orders? <span class="faq-icon">+</span></button>
+        <div class="faq-a"><div class="faq-a-inner">Yes, please contact us for bulk orders via WhatsApp or email at rolliokitchen@gmail.com.</div></div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q" aria-expanded="false">How soon will my order be shipped? <span class="faq-icon">+</span></button>
+        <div class="faq-a"><div class="faq-a-inner">Orders are usually dispatched within 1–2 business days.</div></div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q" aria-expanded="false">Can I gift ROTI EASE? <span class="faq-icon">+</span></button>
+        <div class="faq-a"><div class="faq-a-inner">Yes, it makes a practical gift for home cooks, bakers, and kitchen enthusiasts.</div></div>
+      </div>
+
+      <div class="faq-cat-label">Returns &amp; Warranty</div>
+
+      <div class="faq-item">
+        <button class="faq-q" aria-expanded="false">Do you accept returns? <span class="faq-icon">+</span></button>
+        <div class="faq-a"><div class="faq-a-inner">We are confident in our product quality. For hygiene reasons, returns are not accepted.</div></div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q" aria-expanded="false">What if I receive a damaged product? <span class="faq-icon">+</span></button>
+        <div class="faq-a"><div class="faq-a-inner">Contact us and we'll help resolve the issue. Please note that an unboxing video is required for replacement claims.</div></div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q" aria-expanded="false">Does it have a warranty? <span class="faq-icon">+</span></button>
+        <div class="faq-a"><div class="faq-a-inner">Please contact us for warranty or replacement support if you experience a manufacturing defect.</div></div>
+      </div>
+
+      <div class="faq-cat-label">Customer Support</div>
+
+      <div class="faq-item">
+        <button class="faq-q" aria-expanded="false">Why choose ROTI EASE? <span class="faq-icon">+</span></button>
+        <div class="faq-a"><div class="faq-a-inner">Less mess, less sticking, and easier rolling every time.</div></div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q" aria-expanded="false">How do I contact customer support? <span class="faq-icon">+</span></button>
+        <div class="faq-a"><div class="faq-a-inner">
+          You can reach us through:
+          <ul>
+            <li><a href="https://wa.me/918147496263" target="_blank" rel="noopener">WhatsApp: 8147496263</a></li>
+            <li><a href="https://www.instagram.com/rolliokitchen" target="_blank" rel="noopener">Instagram: @rolliokitchen</a></li>
+            <li><a href="mailto:rolliokitchen@gmail.com">Email: rolliokitchen@gmail.com</a></li>
+          </ul>
+        </div></div>
       </div>
     </div>
   </div>
 </section>
 
-<!-- ═══ CTA BANNER ═══ -->
-<section id="cta-banner">
-  <div class="cta-bg"></div>
-  <div class="cta-overlay"></div>
-  <div class="cta-content fade">
-    <span class="label">Experience smarter cooking</span>
-    <h2>Switch to smarter cooking<br>with ROTI EASE.</h2>
-    <p>Join families across India who've made ROTI EASE a part of their everyday rhythm.</p>
-    <a href="https://www.amazon.in/gp/product/B0H49NRR3V/ref=cx_skuctr_share?smid=A1RUQA1NM49FOQ" class="btn btn-amazon" target="_blank" rel="noopener"><span class="amz-icon">🛒</span> Order Now on Amazon</a>
+<!-- ═══ CARE INSTRUCTIONS ═══ -->
+<section id="care">
+  <div class="container">
+    <div class="sec-head fade">
+      <span class="eyebrow">Product Care</span>
+      <h2 class="sec-title">Care, Policy &amp; Feedback</h2>
+      <div class="sec-rule"></div>
+    </div>
+    <div class="care-grid fade d2">
+      <div class="care-col">
+        <h3>🧼 Care Instructions</h3>
+        <ul>
+          <li>Wash before first use.</li>
+          <li>Wash immediately after use with mild soap and water.</li>
+          <li>Wipe dry immediately after washing.</li>
+          <li>Do not place in direct contact with fire or on a hot flame.</li>
+          <li>Avoid using sharp objects or knives on the mat.</li>
+          <li>Store in a clean and dry place.</li>
+        </ul>
+      </div>
+      <div class="care-col">
+        <h3>📦 Damage &amp; Replacement Policy</h3>
+        <ul>
+          <li>Replacement provided only for products damaged during transit.</li>
+          <li>An unboxing video is mandatory to claim a replacement. The video must clearly show the sealed package being opened and the damaged product.</li>
+          <li>Claims without an unboxing video will not be accepted.</li>
+          <li>No exchange or return available for any other reason.</li>
+        </ul>
+      </div>
+      <div class="care-col">
+        <h3>⭐ We'd Love Your Feedback!</h3>
+        <p>If you enjoyed using ROTIEASE, please leave us a review and share your experience. Your feedback means a lot to our small business.</p>
+        <ul>
+          <li>Leave a review on Amazon</li>
+          <li>Tag us on Instagram: <strong>@rolliokitchen</strong></li>
+          <li>We'd love to see your creations with ROTIEASE!</li>
+        </ul>
+        <div class="care-btns">
+          <a href="https://www.amazon.in/gp/product/B0H49NRR3V/ref=cx_skuctr_share?smid=A1RUQA1NM49FOQ" class="btn btn-amazon" target="_blank" rel="noopener">Review on Amazon</a>
+          <a href="https://www.instagram.com/rolliokitchen" class="btn btn-dark" target="_blank" rel="noopener">📸 Instagram</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ TERMS & CONDITIONS ═══ -->
+<section id="terms">
+  <div class="container">
+    <div class="sec-head fade">
+      <span class="eyebrow">Legal</span>
+      <h2 class="sec-title">Terms &amp; Conditions</h2>
+      <p class="sec-sub">By purchasing ROTIEASE from Rolliokitchen, you agree to the following terms.</p>
+      <div class="sec-rule"></div>
+    </div>
+    <div class="terms-inner fade d2">
+      <div class="terms-item">
+        <h4><span class="t-num">01.</span> Product Information</h4>
+        <p>ROTIEASE is a reusable food-grade silicone rolling mat designed for food preparation. Product images are for illustration purposes only. Minor variations in colour or packaging may occur.</p>
+      </div>
+      <div class="terms-item">
+        <h4><span class="t-num">02.</span> Pricing</h4>
+        <p>All prices are in Indian Rupees (INR). Prices are subject to change without prior notice. Applicable GST, if any, will be charged as per Indian law.</p>
+      </div>
+      <div class="terms-item">
+        <h4><span class="t-num">03.</span> Orders</h4>
+        <p>Orders are confirmed only after successful payment or confirmation of Cash on Delivery (where applicable). Rolliokitchen reserves the right to cancel any order due to stock unavailability, pricing errors, or suspected fraudulent activity.</p>
+      </div>
+      <div class="terms-item">
+        <h4><span class="t-num">04.</span> Shipping</h4>
+        <p>Delivery timelines are estimated and may vary depending on the courier service and destination. Rolliokitchen is not responsible for delays caused by courier companies, weather conditions, natural disasters, or other unforeseen circumstances.</p>
+      </div>
+      <div class="terms-item">
+        <h4><span class="t-num">05.</span> Returns &amp; Replacements</h4>
+        <p>Due to hygiene reasons, ROTIEASE is not eligible for return or exchange once delivered. Replacements will only be provided if the product is received damaged, defective, or incorrect. Any issue must be reported within 48 hours of delivery with clear photos/videos and the order details.</p>
+      </div>
+      <div class="terms-item">
+        <h4><span class="t-num">06.</span> Product Usage</h4>
+        <ul>
+          <li>ROTIEASE is intended only for food preparation.</li>
+          <li>Keep away from direct flame and sharp objects.</li>
+          <li>Do not cut directly on the mat.</li>
+          <li>Follow the care instructions provided with the product.</li>
+        </ul>
+      </div>
+      <div class="terms-item">
+        <h4><span class="t-num">07.</span> Warranty</h4>
+        <p>ROTIEASE does not carry any warranty against damage caused by misuse, improper handling, cutting, burning, or normal wear and tear.</p>
+      </div>
+      <div class="terms-item">
+        <h4><span class="t-num">08.</span> Limitation of Liability</h4>
+        <p>Rolliokitchen's liability is limited to the purchase value of the product. We are not liable for indirect, incidental, or consequential damages arising from the use of the product.</p>
+      </div>
+      <div class="terms-item">
+        <h4><span class="t-num">09.</span> Intellectual Property</h4>
+        <p>The names ROTIEASE and Rolliokitchen, along with all logos, images, and content, are the intellectual property of Rolliokitchen owned by Nayaka Enterprises. Unauthorized use, copying, or reproduction is prohibited.</p>
+      </div>
+      <div class="terms-item">
+        <h4><span class="t-num">10.</span> Customer Support</h4>
+        <p>Email: <a href="mailto:rolliokitchen@gmail.com" style="color:var(--gold)">rolliokitchen@gmail.com</a>. We aim to respond to customer queries within 1–2 business days.</p>
+      </div>
+      <div class="terms-item">
+        <h4><span class="t-num">11.</span> Governing Law</h4>
+        <p>These Terms &amp; Conditions shall be governed by the laws of India. Any disputes shall be subject to the jurisdiction of the competent courts in Bengaluru, Karnataka.</p>
+      </div>
+      <div class="terms-item">
+        <h4><span class="t-num">12.</span> Acceptance</h4>
+        <p>By placing an order, you acknowledge that you have read, understood, and agreed to these Terms &amp; Conditions.</p>
+      </div>
+    </div>
   </div>
 </section>
 
 <!-- ═══ CONTACT ═══ -->
 <section id="contact">
   <div class="container">
-    <div class="fade">
-      <span class="label">Get in touch</span>
-      <h2 class="section-title">We'd love to hear<br>from you.</h2>
-      <p class="subtitle">Questions, wholesale enquiries, or just say hello.</p>
-      <p class="subtitle" style="font-size:15px;margin-top:-36px;margin-bottom:48px;">
-        Interested to buy? <a href="https://www.amazon.in/gp/product/B0H49NRR3V/ref=cx_skuctr_share?smid=A1RUQA1NM49FOQ" target="_blank" rel="noopener" style="color:var(--gold);font-weight:500;text-decoration:underline;text-underline-offset:3px;">Order ROTI EASE on Amazon →</a>
-      </p>
+    <div class="sec-head fade">
+      <span class="eyebrow">Get in touch</span>
+      <h2 class="sec-title">We'd love to hear<br>from you.</h2>
+      <p class="sec-sub">Questions, wholesale enquiries, or just say hello.</p>
+      <p style="font-size:15px;margin-top:14px;color:var(--text-lt)">Interested to buy? <a href="https://www.amazon.in/gp/product/B0H49NRR3V/ref=cx_skuctr_share?smid=A1RUQA1NM49FOQ" target="_blank" rel="noopener" style="color:var(--gold);font-weight:500;text-decoration:underline;text-underline-offset:3px;">Order ROTI EASE on Amazon →</a></p>
+      <div class="sec-rule"></div>
     </div>
-    <form class="contact-form fade d2" id="contactForm">
+    <div class="contact-channels fade d1">
+      <div class="contact-channel">
+        <div class="ch-icon">💬</div>
+        <h4>WhatsApp</h4>
+        <p>Chat with us directly for orders and support.</p>
+        <a href="https://wa.me/918147496263" target="_blank" rel="noopener">8147496263 →</a>
+      </div>
+      <div class="contact-channel">
+        <div class="ch-icon">📸</div>
+        <h4>Instagram</h4>
+        <p>DM us or follow for updates and recipes.</p>
+        <a href="https://www.instagram.com/rolliokitchen" target="_blank" rel="noopener">@rolliokitchen →</a>
+      </div>
+      <div class="contact-channel">
+        <div class="ch-icon">✉️</div>
+        <h4>Email</h4>
+        <p>For wholesale, business, and general enquiries.</p>
+        <a href="mailto:rolliokitchen@gmail.com">rolliokitchen@gmail.com →</a>
+      </div>
+    </div>
+    <form class="contact-form fade d3" id="contactForm">
       <div class="form-row">
-        <input type="text"  placeholder="Your Name"      required>
-        <input type="email" placeholder="Email Address"  required>
+        <input type="text"  placeholder="Your Name"     required>
+        <input type="email" placeholder="Email Address" required>
       </div>
       <input type="text" placeholder="Subject">
       <textarea placeholder="Your message…"></textarea>
@@ -841,68 +1183,95 @@
   <div class="footer-grid">
     <div class="footer-brand">
       <h3>ROTI EASE</h3>
-      <p>Multi-purpose non-stick rolling mat. 100% food-grade silicone · BPA free · Teflon free · Heat resistant to 230°C. Crafted with care. Made in India by Rollio Kitchen.</p>
+      <p>Multi-purpose non-stick rolling mat. 100% food-grade silicone · BPA free · Teflon free · Heat resistant to 230°C. Crafted with care. Made in India by Rollio Kitchen — Nayaka Enterprises.</p>
+      <div class="footer-social">
+        <a href="https://www.instagram.com/rolliokitchen" target="_blank" rel="noopener">Instagram</a>
+        <a href="https://wa.me/918147496263" target="_blank" rel="noopener">WhatsApp</a>
+        <a href="https://www.amazon.in/gp/product/B0H49NRR3V/ref=cx_skuctr_share?smid=A1RUQA1NM49FOQ" target="_blank" rel="noopener">Amazon</a>
+      </div>
     </div>
     <div class="footer-col">
-      <h4>Explore</h4>
+      <h4>Product</h4>
       <ul>
-        <li><a href="#perfect-for">Products</a></li>
+        <li><a href="#certified">Features</a></li>
+        <li><a href="#certified">Uses</a></li>
         <li><a href="#about">Our Story</a></li>
-        <li><a href="#contact">Contact</a></li>
+        <li><a href="#origin">Made in India</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h4>Order</h4>
+      <ul>
+        <li><a href="https://www.amazon.in/gp/product/B0H49NRR3V/ref=cx_skuctr_share?smid=A1RUQA1NM49FOQ" target="_blank" rel="noopener">Buy on Amazon</a></li>
+        <li><a href="https://wa.me/918147496263" target="_blank" rel="noopener">Order on WhatsApp</a></li>
+        <li><a href="#how-to-order">How to Order</a></li>
       </ul>
     </div>
     <div class="footer-col">
       <h4>Support</h4>
       <ul>
-        <li><a href="#contact">Wholesale Enquiries</a></li>
-        <li><a href="#contact">Shipping &amp; Returns</a></li>
-        <li><a href="#contact">FAQ</a></li>
+        <li><a href="#faq">FAQ</a></li>
+        <li><a href="#care">Care Instructions</a></li>
+        <li><a href="#terms">Terms &amp; Conditions</a></li>
+        <li><a href="#contact">Contact Us</a></li>
       </ul>
     </div>
   </div>
   <div class="footer-bottom">
-    <p>© 2025 ROTI EASE — Marketed by Rollio Kitchen. All rights reserved.</p>
+    <p>© 2025 ROTI EASE — Marketed by Rollio Kitchen, Nayaka Enterprises. All rights reserved.</p>
     <p>Crafted with care in India.</p>
   </div>
 </footer>
 
 <script>
-  // ─── NAV scroll ───
+  // NAV scroll
   const nav = document.getElementById('nav');
   window.addEventListener('scroll', () => {
     nav.classList.toggle('scrolled', window.scrollY > 60);
   }, { passive: true });
 
-  // ─── Hero entrance ───
+  // Hero entrance
   window.addEventListener('load', () => {
-    const hero  = document.getElementById('hero');
-    const heroBg = document.getElementById('heroBg');
-    hero.classList.add('go');
-    heroBg.classList.add('ready');
+    document.getElementById('hero').classList.add('go');
+    document.getElementById('heroBg').classList.add('ready');
   });
 
-  // ─── Scroll fade-in ───
+  // Scroll fade-in
   const io = new IntersectionObserver((entries) => {
     entries.forEach(e => {
-      if (e.isIntersecting) {
-        e.target.classList.add('visible');
-        io.unobserve(e.target);
-      }
+      if (e.isIntersecting) { e.target.classList.add('visible'); io.unobserve(e.target); }
     });
-  }, { threshold: 0.10, rootMargin: '0px 0px -40px 0px' });
-
+  }, { threshold: 0.08, rootMargin: '0px 0px -40px 0px' });
   document.querySelectorAll('.fade').forEach(el => io.observe(el));
 
-  // ─── Contact form ───
+  // FAQ accordion
+  document.querySelectorAll('.faq-q').forEach(btn => {
+    btn.addEventListener('click', () => {
+      const answer = btn.closest('.faq-item').querySelector('.faq-a');
+      const isOpen = btn.classList.contains('open');
+      document.querySelectorAll('.faq-q.open').forEach(b => {
+        b.classList.remove('open');
+        b.setAttribute('aria-expanded', 'false');
+        b.closest('.faq-item').querySelector('.faq-a').classList.remove('open');
+      });
+      if (!isOpen) {
+        btn.classList.add('open');
+        btn.setAttribute('aria-expanded', 'true');
+        answer.classList.add('open');
+      }
+    });
+  });
+
+  // Contact form
   document.getElementById('contactForm').addEventListener('submit', function(e) {
     e.preventDefault();
     const btn = this.querySelector('button');
-    const original = btn.textContent;
+    const orig = btn.textContent;
     btn.textContent = 'Message Sent ✓';
-    btn.style.background = '#4A7A50';
+    btn.style.background = '#2D5016';
     btn.disabled = true;
     setTimeout(() => {
-      btn.textContent = original;
+      btn.textContent = orig;
       btn.style.background = '';
       btn.disabled = false;
       this.reset();
