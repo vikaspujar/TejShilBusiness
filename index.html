@@ -112,7 +112,7 @@
       display: flex; flex-direction: column; align-items: flex-start; gap: 1px; line-height: 1;
     }
     .nav-logo-spoon {
-      display: block; margin-left: 12px; /* aligns spoon above the 'o' in Rollio */
+      display: block; margin-left: 0; /* spans full brand name width */
     }
     .tm-mark {
       font-size: 0.42em; vertical-align: super; font-style: normal;
@@ -286,7 +286,8 @@
       font-size: 20px; font-weight: 300; color: var(--text-lt);
       transition: transform 0.3s var(--ease); font-style: normal; flex-shrink: 0;
     }
-    .ptab-head.open .ptab-icon { transform: rotate(45deg); color: var(--gold); }
+    .ptab-head.open .ptab-icon { transform: none; color: var(--gold); font-size: 0; }
+    .ptab-head.open .ptab-icon::before { content: '−'; font-size: 20px; font-weight: 300; }
     .ptab-body { max-height: 0; overflow: hidden; transition: max-height 0.5s var(--ease); }
     .ptab-content { padding: 4px 0 36px; }
 
@@ -369,7 +370,8 @@
       font-size: 13px; color: var(--text-lt); font-style: normal;
       transition: all 0.25s;
     }
-    .faq-q.open .faq-icon { border-color: var(--gold); color: var(--gold); transform: rotate(45deg); }
+    .faq-q.open .faq-icon { border-color: var(--gold); color: var(--gold); transform: none; font-size: 0; }
+    .faq-q.open .faq-icon::before { content: '−'; font-size: 13px; color: var(--gold); }
     .faq-a { max-height: 0; overflow: hidden; transition: max-height 0.35s var(--ease); }
     .faq-a.open { max-height: 500px; }
     .faq-a-inner { padding: 0 0 14px; font-size: 13px; color: var(--text-lt); line-height: 1.7; }
@@ -566,6 +568,7 @@
       .prod-details-grid { grid-template-columns: 140px 1fr; }
     }
     @media (max-width: 480px) {
+      .hero-eyebrow { margin-bottom: 24px; } /* more breathing room between Roti Ease and by Rolliokitchen */
       .hero-content h1 { font-size: 34px; }
       .hero-btns { flex-direction: column; align-items: center; }
       .about-btns { flex-direction: column; align-items: flex-start; }
@@ -578,11 +581,11 @@
 <!-- ═══ NAV ═══ -->
 <nav id="nav">
   <a href="#" class="nav-logo">
-    <svg class="nav-logo-spoon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 40 14" width="26" height="10" aria-hidden="true">
-      <ellipse cx="10" cy="7" rx="9.5" ry="6" fill="#C4903A"/>
-      <path d="M19.5 7 C25 6.5 31 7 40 7" stroke="#8B6010" stroke-width="2.5" stroke-linecap="round" fill="none"/>
+    <svg class="nav-logo-spoon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 20" width="300" height="16" aria-hidden="true">
+      <ellipse cx="14" cy="10" rx="13" ry="9" fill="#C4903A"/>
+      <path d="M27 10 C80 9 180 10 300 10" stroke="#8B6010" stroke-width="3" stroke-linecap="round" fill="none"/>
     </svg>
-    Rolliokitchen<sup class="tm-mark">™</sup>
+    <span>Rolliokitchen<sup class="tm-mark">™</sup></span>
   </a>
   <ul class="nav-links">
     <li><a href="#product">Product</a></li>
@@ -751,7 +754,7 @@
 
           <div class="faq-cat-label">Ordering &amp; Purchase</div>
           <div class="faq-item"><button class="faq-q" aria-expanded="false">Where can I buy ROTI EASE<sup class="tm-mark">™</sup>? <span class="faq-icon">+</span></button><div class="faq-a"><div class="faq-a-inner">You can order online through <a href="https://www.amazon.in/gp/product/B0H49NRR3V/ref=cx_skuctr_share?smid=A1RUQA1NM49FOQ" target="_blank" rel="noopener">Amazon</a>, or place an order via <a href="https://wa.me/918147496263" target="_blank" rel="noopener">WhatsApp (8147496263)</a> or Instagram DM <a href="https://www.instagram.com/rolliokitchen" target="_blank" rel="noopener">@rolliokitchen</a>.</div></div></div>
-          <div class="faq-item"><button class="faq-q" aria-expanded="false">Do you offer wholesale orders? <span class="faq-icon">+</span></button><div class="faq-a"><div class="faq-a-inner">Yes, please contact us for bulk orders via WhatsApp or email at rolliokitchen@gmail.com.</div></div></div>
+          <div class="faq-item"><button class="faq-q" aria-expanded="false">Do you offer wholesale orders? <span class="faq-icon">+</span></button><div class="faq-a"><div class="faq-a-inner">Yes, please contact us for bulk orders via WhatsApp or email at care@rolliokitchen.com.</div></div></div>
           <div class="faq-item"><button class="faq-q" aria-expanded="false">How soon will my order be shipped? <span class="faq-icon">+</span></button><div class="faq-a"><div class="faq-a-inner">Orders are usually dispatched within 1–2 business days.</div></div></div>
           <div class="faq-item"><button class="faq-q" aria-expanded="false">Can I gift ROTI EASE<sup class="tm-mark">™</sup>? <span class="faq-icon">+</span></button><div class="faq-a"><div class="faq-a-inner">Yes, it makes a practical gift for home cooks, bakers, and kitchen enthusiasts.</div></div></div>
 
@@ -762,7 +765,7 @@
 
           <div class="faq-cat-label">Customer Support</div>
           <div class="faq-item"><button class="faq-q" aria-expanded="false">Why choose ROTI EASE<sup class="tm-mark">™</sup>? <span class="faq-icon">+</span></button><div class="faq-a"><div class="faq-a-inner">Less mess, less sticking, and easier rolling every time.</div></div></div>
-          <div class="faq-item"><button class="faq-q" aria-expanded="false">How do I contact customer support? <span class="faq-icon">+</span></button><div class="faq-a"><div class="faq-a-inner">You can reach us through:<ul><li><a href="https://wa.me/918147496263" target="_blank" rel="noopener">WhatsApp: 8147496263</a></li><li><a href="https://www.instagram.com/rolliokitchen" target="_blank" rel="noopener">Instagram: @rolliokitchen</a></li><li><a href="mailto:rolliokitchen@gmail.com">Email: rolliokitchen@gmail.com</a></li></ul></div></div></div>
+          <div class="faq-item"><button class="faq-q" aria-expanded="false">How do I contact customer support? <span class="faq-icon">+</span></button><div class="faq-a"><div class="faq-a-inner">You can reach us through:<ul><li><a href="https://wa.me/918147496263" target="_blank" rel="noopener">WhatsApp: 8147496263</a></li><li><a href="https://www.instagram.com/rolliokitchen" target="_blank" rel="noopener">Instagram: @rolliokitchen</a></li><li><a href="mailto:care@rolliokitchen.com">Email: care@rolliokitchen.com</a></li></ul></div></div></div>
 
         </div>
       </div>
@@ -779,7 +782,7 @@
           <div class="terms-item"><h4><span class="t-num">03.</span> Shipping &amp; Returns</h4><p>Orders are dispatched within <strong>1–2 business days</strong>. Delivery timelines may vary depending on the courier and destination. Rolliokitchen<sup class="tm-mark">™</sup> is not responsible for delays caused by courier companies or unforeseen circumstances. For hygiene reasons, ROTI EASE<sup class="tm-mark">™</sup> is not eligible for return or exchange once delivered. Replacements are provided only if the product is received damaged or defective — any issue must be reported within 48 hours of delivery with an unboxing video and order details.</p></div>
           <div class="terms-item"><h4><span class="t-num">04.</span> Warranty &amp; Liabilities</h4><p>ROTI EASE<sup class="tm-mark">™</sup> does not carry any warranty against damage caused by misuse, improper handling, cutting, burning, or normal wear and tear. Rolliokitchen<sup class="tm-mark">™</sup>'s liability is limited to the purchase value of the product. We are not liable for indirect, incidental, or consequential damages arising from the use of the product.</p></div>
           <div class="terms-item"><h4><span class="t-num">05.</span> Intellectual Property</h4><p>The names ROTI EASE<sup class="tm-mark">™</sup> and Rolliokitchen<sup class="tm-mark">™</sup>, along with all logos, images, and content, are the intellectual property of Rolliokitchen<sup class="tm-mark">™</sup> owned by Nayaka Enterprises. Unauthorized use, copying, or reproduction is prohibited.</p></div>
-          <div class="terms-item"><h4><span class="t-num">06.</span> Customer Support</h4><p>Email: <a href="mailto:rolliokitchen@gmail.com" style="color:var(--gold)">rolliokitchen@gmail.com</a>. We aim to respond to customer queries within 1–2 business days.</p></div>
+          <div class="terms-item"><h4><span class="t-num">06.</span> Customer Support</h4><p>Email: <a href="mailto:care@rolliokitchen.com" style="color:var(--gold)">care@rolliokitchen.com</a>. We aim to respond to customer queries within 1–2 business days.</p></div>
           <div class="terms-item"><h4><span class="t-num">07.</span> Governing Law</h4><p>These Terms &amp; Conditions shall be governed by the laws of India. Any disputes shall be subject to the jurisdiction of the competent courts in Bengaluru, Karnataka.</p></div>
           <div class="terms-item"><h4><span class="t-num">08.</span> Acceptance</h4><p>By placing an order, you acknowledge that you have read, understood, and agreed to these Terms &amp; Conditions.</p></div>
         </div>
@@ -918,7 +921,7 @@
         <div class="footer-contact">
           <div class="footer-contact-item"><svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 24 24" fill="currentColor" style="flex-shrink:0"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 0 1-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 0 1-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 0 1 2.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0 0 12.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 0 0 5.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 0 0-3.48-8.413z"/></svg><a href="https://wa.me/918147496263" target="_blank" rel="noopener">8147496263</a></div>
           <div class="footer-contact-item"><svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 24 24" fill="currentColor" style="flex-shrink:0"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 1 0 0 12.324 6.162 6.162 0 0 0 0-12.324zM12 16a4 4 0 1 1 0-8 4 4 0 0 1 0 8zm6.406-11.845a1.44 1.44 0 1 0 0 2.881 1.44 1.44 0 0 0 0-2.881z"/></svg><a href="https://www.instagram.com/rolliokitchen" target="_blank" rel="noopener">@rolliokitchen</a></div>
-          <div class="footer-contact-item">✉️ <a href="mailto:rolliokitchen@gmail.com">rolliokitchen@gmail.com</a></div>
+          <div class="footer-contact-item">✉️ <a href="mailto:care@rolliokitchen.com">care@rolliokitchen.com</a></div>
         </div>
       </div>
       <ul>
