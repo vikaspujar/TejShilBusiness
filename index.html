@@ -12,7 +12,7 @@
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;1,400&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@1,600&family=Playfair+Display:ital,wght@0,400;0,500;0,600;1,400&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
 
   <style>
     /* ─── RESET ─── */
@@ -107,8 +107,16 @@
       backdrop-filter: blur(12px); box-shadow: 0 1px 0 var(--border);
     }
     .nav-logo {
-      font-family: var(--serif); font-size: 24px; font-weight: 500;
-      color: #fff; letter-spacing: 0.04em; transition: color 0.4s;
+      font-family: 'Cormorant Garamond', Georgia, serif; font-size: 48px; font-weight: 600;
+      font-style: italic; color: #fff; letter-spacing: 0.03em; transition: color 0.4s;
+      display: flex; flex-direction: column; align-items: flex-start; gap: 1px; line-height: 1;
+    }
+    .nav-logo-spoon {
+      display: block; margin-left: 12px; /* aligns spoon above the 'o' in Rollio */
+    }
+    .tm-mark {
+      font-size: 0.42em; vertical-align: super; font-style: normal;
+      font-weight: 400; letter-spacing: 0;
     }
     #nav.scrolled .nav-logo { color: var(--charcoal); }
     .nav-links { display: flex; gap: 32px; }
@@ -153,7 +161,7 @@
     }
     .hero-content { position: relative; z-index: 2; max-width: 820px; padding: 0 24px; }
     .hero-eyebrow {
-      font-family: var(--serif); font-size: clamp(36px, 6vw, 72px);
+      font-family: var(--serif); font-size: clamp(20px, 3.5vw, 48px);
       font-weight: 400; line-height: 1.1; letter-spacing: -0.02em; text-transform: none;
       color: #fff; margin-bottom: 8px;
       opacity: 0; transform: translateY(14px); transition: all 0.8s var(--ease) 0.2s;
@@ -569,7 +577,13 @@
 
 <!-- ═══ NAV ═══ -->
 <nav id="nav">
-  <a href="#" class="nav-logo">Rolliokitchen</a>
+  <a href="#" class="nav-logo">
+    <svg class="nav-logo-spoon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 40 14" width="26" height="10" aria-hidden="true">
+      <ellipse cx="10" cy="7" rx="9.5" ry="6" fill="#C4903A"/>
+      <path d="M19.5 7 C25 6.5 31 7 40 7" stroke="#8B6010" stroke-width="2.5" stroke-linecap="round" fill="none"/>
+    </svg>
+    Rolliokitchen<sup class="tm-mark">™</sup>
+  </a>
   <ul class="nav-links">
     <li><a href="#product">Product</a></li>
     <li><a href="#how-to-order">How to Order</a></li>
@@ -583,8 +597,8 @@
   <div class="hero-bg" id="heroBg"></div>
   <div class="hero-overlay"></div>
   <div class="hero-content">
-    <span class="hero-eyebrow">Roti Ease</span>
-    <p class="hero-subbrand">by Rolliokitchen · Made in India</p>
+    <span class="hero-eyebrow">Roti Ease<sup class="tm-mark">™</sup></span>
+    <p class="hero-subbrand">by Rolliokitchen<sup class="tm-mark">™</sup> · Made in India</p>
     <h1>Roll perfect rotis<br>Every single time</h1>
     <p class="hero-p">Premium 100% food-grade silicone rolling mat — non-stick, BPA free, Teflon free. Designed for everyday Indian cooking.</p>
     <div class="hero-btns">
@@ -612,8 +626,8 @@
       </div>
     </div>
     <div class="product-info-col fade d1">
-      <p class="prod-brand">by Rolliokitchen</p>
-      <h1 class="prod-title">Roti Ease</h1>
+      <p class="prod-brand">by Rolliokitchen<sup class="tm-mark">™</sup></p>
+      <h1 class="prod-title">Roti Ease<sup class="tm-mark">™</sup></h1>
       <p class="prod-subtitle">Made in India</p>
       <div class="prod-certs">
         <span class="prod-cert">✓ Food Grade</span>
@@ -705,11 +719,11 @@
           <div class="faq-item"><button class="faq-q" aria-expanded="false">What is it made of? <span class="faq-icon">+</span></button><div class="faq-a"><div class="faq-a-inner">100% food-grade, BPA-free silicone.</div></div></div>
           <div class="faq-item"><button class="faq-q" aria-expanded="false">Is it safe for food? <span class="faq-icon">+</span></button><div class="faq-a"><div class="faq-a-inner">Yes, it is food-safe, Teflon free, non-toxic, and odorless.</div></div></div>
           <div class="faq-item"><button class="faq-q" aria-expanded="false">Does it contain harmful chemicals? <span class="faq-icon">+</span></button><div class="faq-a"><div class="faq-a-inner">No. It is 100% food-grade silicone, BPA-free, Teflon-free, non-toxic, odorless, and food-safe.</div></div></div>
-          <div class="faq-item"><button class="faq-q" aria-expanded="false">What is the size of ROTI EASE? <span class="faq-icon">+</span></button><div class="faq-a"><div class="faq-a-inner">11.5 inches (approximately 29 cm) in diameter.</div></div></div>
+          <div class="faq-item"><button class="faq-q" aria-expanded="false">What is the size of ROTI EASE<sup class="tm-mark">™</sup>? <span class="faq-icon">+</span></button><div class="faq-a"><div class="faq-a-inner">11.5 inches (approximately 29 cm) in diameter.</div></div></div>
           <div class="faq-item"><button class="faq-q" aria-expanded="false">What is the thickness of the mat? <span class="faq-icon">+</span></button><div class="faq-a"><div class="faq-a-inner">Approximately 1 mm.</div></div></div>
           <div class="faq-item"><button class="faq-q" aria-expanded="false">Is it flexible? <span class="faq-icon">+</span></button><div class="faq-a"><div class="faq-a-inner">Yes, it is soft, flexible, and easy to roll or fold for storage.</div></div></div>
           <div class="faq-item"><button class="faq-q" aria-expanded="false">Is it heat resistant? <span class="faq-icon">+</span></button><div class="faq-a"><div class="faq-a-inner">Yes, up to 230°C.</div></div></div>
-          <div class="faq-item"><button class="faq-q" aria-expanded="false">How long does it last? <span class="faq-icon">+</span></button><div class="faq-a"><div class="faq-a-inner">With proper care, ROTI EASE is designed for years of regular use.</div></div></div>
+          <div class="faq-item"><button class="faq-q" aria-expanded="false">How long does it last? <span class="faq-icon">+</span></button><div class="faq-a"><div class="faq-a-inner">With proper care, ROTI EASE<sup class="tm-mark">™</sup> is designed for years of regular use.</div></div></div>
 
           <div class="faq-cat-label">Usage &amp; Compatibility</div>
           <div class="faq-item"><button class="faq-q" aria-expanded="false">What can I make with it? <span class="faq-icon">+</span></button><div class="faq-a"><div class="faq-a-inner">Rotis, puranpoli, chapatis, parathas, pooris, Holige, Akki Rotti, Ragi Rotti, pizza, cookies, fondant, momos, samosas, tortillas, and more.</div></div></div>
@@ -736,10 +750,10 @@
           <div class="faq-item"><button class="faq-q" aria-expanded="false">Is it eco-friendly? <span class="faq-icon">+</span></button><div class="faq-a"><div class="faq-a-inner">Yes. Being reusable, it helps reduce the use of disposable baking paper and plastic sheets.</div></div></div>
 
           <div class="faq-cat-label">Ordering &amp; Purchase</div>
-          <div class="faq-item"><button class="faq-q" aria-expanded="false">Where can I buy ROTI EASE? <span class="faq-icon">+</span></button><div class="faq-a"><div class="faq-a-inner">You can order online through <a href="https://www.amazon.in/gp/product/B0H49NRR3V/ref=cx_skuctr_share?smid=A1RUQA1NM49FOQ" target="_blank" rel="noopener">Amazon</a>, or place an order via <a href="https://wa.me/918147496263" target="_blank" rel="noopener">WhatsApp (8147496263)</a> or Instagram DM <a href="https://www.instagram.com/rolliokitchen" target="_blank" rel="noopener">@rolliokitchen</a>.</div></div></div>
+          <div class="faq-item"><button class="faq-q" aria-expanded="false">Where can I buy ROTI EASE<sup class="tm-mark">™</sup>? <span class="faq-icon">+</span></button><div class="faq-a"><div class="faq-a-inner">You can order online through <a href="https://www.amazon.in/gp/product/B0H49NRR3V/ref=cx_skuctr_share?smid=A1RUQA1NM49FOQ" target="_blank" rel="noopener">Amazon</a>, or place an order via <a href="https://wa.me/918147496263" target="_blank" rel="noopener">WhatsApp (8147496263)</a> or Instagram DM <a href="https://www.instagram.com/rolliokitchen" target="_blank" rel="noopener">@rolliokitchen</a>.</div></div></div>
           <div class="faq-item"><button class="faq-q" aria-expanded="false">Do you offer wholesale orders? <span class="faq-icon">+</span></button><div class="faq-a"><div class="faq-a-inner">Yes, please contact us for bulk orders via WhatsApp or email at rolliokitchen@gmail.com.</div></div></div>
           <div class="faq-item"><button class="faq-q" aria-expanded="false">How soon will my order be shipped? <span class="faq-icon">+</span></button><div class="faq-a"><div class="faq-a-inner">Orders are usually dispatched within 1–2 business days.</div></div></div>
-          <div class="faq-item"><button class="faq-q" aria-expanded="false">Can I gift ROTI EASE? <span class="faq-icon">+</span></button><div class="faq-a"><div class="faq-a-inner">Yes, it makes a practical gift for home cooks, bakers, and kitchen enthusiasts.</div></div></div>
+          <div class="faq-item"><button class="faq-q" aria-expanded="false">Can I gift ROTI EASE<sup class="tm-mark">™</sup>? <span class="faq-icon">+</span></button><div class="faq-a"><div class="faq-a-inner">Yes, it makes a practical gift for home cooks, bakers, and kitchen enthusiasts.</div></div></div>
 
           <div class="faq-cat-label">Returns &amp; Warranty</div>
           <div class="faq-item"><button class="faq-q" aria-expanded="false">Do you accept returns? <span class="faq-icon">+</span></button><div class="faq-a"><div class="faq-a-inner">We are confident in our product quality. For hygiene reasons, returns are not accepted.</div></div></div>
@@ -747,7 +761,7 @@
           <div class="faq-item"><button class="faq-q" aria-expanded="false">Does it have a warranty? <span class="faq-icon">+</span></button><div class="faq-a"><div class="faq-a-inner">Please contact us for warranty or replacement support if you experience a manufacturing defect.</div></div></div>
 
           <div class="faq-cat-label">Customer Support</div>
-          <div class="faq-item"><button class="faq-q" aria-expanded="false">Why choose ROTI EASE? <span class="faq-icon">+</span></button><div class="faq-a"><div class="faq-a-inner">Less mess, less sticking, and easier rolling every time.</div></div></div>
+          <div class="faq-item"><button class="faq-q" aria-expanded="false">Why choose ROTI EASE<sup class="tm-mark">™</sup>? <span class="faq-icon">+</span></button><div class="faq-a"><div class="faq-a-inner">Less mess, less sticking, and easier rolling every time.</div></div></div>
           <div class="faq-item"><button class="faq-q" aria-expanded="false">How do I contact customer support? <span class="faq-icon">+</span></button><div class="faq-a"><div class="faq-a-inner">You can reach us through:<ul><li><a href="https://wa.me/918147496263" target="_blank" rel="noopener">WhatsApp: 8147496263</a></li><li><a href="https://www.instagram.com/rolliokitchen" target="_blank" rel="noopener">Instagram: @rolliokitchen</a></li><li><a href="mailto:rolliokitchen@gmail.com">Email: rolliokitchen@gmail.com</a></li></ul></div></div></div>
 
         </div>
@@ -761,10 +775,10 @@
         <div class="ptab-content">
 
           <div class="terms-item"><h4><span class="t-num">01.</span> Pricing</h4><p>All prices are in Indian Rupees (INR). Prices are subject to change without prior notice. Applicable GST, if any, will be charged as per Indian law.</p></div>
-          <div class="terms-item"><h4><span class="t-num">02.</span> Orders</h4><p>Orders are confirmed only after successful payment or confirmation of Cash on Delivery (where applicable). Rolliokitchen reserves the right to cancel any order due to stock unavailability, pricing errors, or suspected fraudulent activity.</p></div>
-          <div class="terms-item"><h4><span class="t-num">03.</span> Shipping &amp; Returns</h4><p>Orders are dispatched within <strong>1–2 business days</strong>. Delivery timelines may vary depending on the courier and destination. Rolliokitchen is not responsible for delays caused by courier companies or unforeseen circumstances. For hygiene reasons, ROTIEASE is not eligible for return or exchange once delivered. Replacements are provided only if the product is received damaged or defective — any issue must be reported within 48 hours of delivery with an unboxing video and order details.</p></div>
-          <div class="terms-item"><h4><span class="t-num">04.</span> Warranty &amp; Liabilities</h4><p>ROTIEASE does not carry any warranty against damage caused by misuse, improper handling, cutting, burning, or normal wear and tear. Rolliokitchen's liability is limited to the purchase value of the product. We are not liable for indirect, incidental, or consequential damages arising from the use of the product.</p></div>
-          <div class="terms-item"><h4><span class="t-num">05.</span> Intellectual Property</h4><p>The names ROTIEASE and Rolliokitchen, along with all logos, images, and content, are the intellectual property of Rolliokitchen owned by Nayaka Enterprises. Unauthorized use, copying, or reproduction is prohibited.</p></div>
+          <div class="terms-item"><h4><span class="t-num">02.</span> Orders</h4><p>Orders are confirmed only after successful payment or confirmation of Cash on Delivery (where applicable). Rolliokitchen<sup class="tm-mark">™</sup> reserves the right to cancel any order due to stock unavailability, pricing errors, or suspected fraudulent activity.</p></div>
+          <div class="terms-item"><h4><span class="t-num">03.</span> Shipping &amp; Returns</h4><p>Orders are dispatched within <strong>1–2 business days</strong>. Delivery timelines may vary depending on the courier and destination. Rolliokitchen<sup class="tm-mark">™</sup> is not responsible for delays caused by courier companies or unforeseen circumstances. For hygiene reasons, ROTI EASE<sup class="tm-mark">™</sup> is not eligible for return or exchange once delivered. Replacements are provided only if the product is received damaged or defective — any issue must be reported within 48 hours of delivery with an unboxing video and order details.</p></div>
+          <div class="terms-item"><h4><span class="t-num">04.</span> Warranty &amp; Liabilities</h4><p>ROTI EASE<sup class="tm-mark">™</sup> does not carry any warranty against damage caused by misuse, improper handling, cutting, burning, or normal wear and tear. Rolliokitchen<sup class="tm-mark">™</sup>'s liability is limited to the purchase value of the product. We are not liable for indirect, incidental, or consequential damages arising from the use of the product.</p></div>
+          <div class="terms-item"><h4><span class="t-num">05.</span> Intellectual Property</h4><p>The names ROTI EASE<sup class="tm-mark">™</sup> and Rolliokitchen<sup class="tm-mark">™</sup>, along with all logos, images, and content, are the intellectual property of Rolliokitchen<sup class="tm-mark">™</sup> owned by Nayaka Enterprises. Unauthorized use, copying, or reproduction is prohibited.</p></div>
           <div class="terms-item"><h4><span class="t-num">06.</span> Customer Support</h4><p>Email: <a href="mailto:rolliokitchen@gmail.com" style="color:var(--gold)">rolliokitchen@gmail.com</a>. We aim to respond to customer queries within 1–2 business days.</p></div>
           <div class="terms-item"><h4><span class="t-num">07.</span> Governing Law</h4><p>These Terms &amp; Conditions shall be governed by the laws of India. Any disputes shall be subject to the jurisdiction of the competent courts in Bengaluru, Karnataka.</p></div>
           <div class="terms-item"><h4><span class="t-num">08.</span> Acceptance</h4><p>By placing an order, you acknowledge that you have read, understood, and agreed to these Terms &amp; Conditions.</p></div>
@@ -779,7 +793,7 @@
 <section id="features">
   <div class="container">
     <div class="sec-head features-head fade">
-      <span class="eyebrow" style="color:rgba(196,144,58,0.9)">Why ROTI EASE</span>
+      <span class="eyebrow" style="color:rgba(196,144,58,0.9)">Why ROTI EASE<sup class="tm-mark">™</sup></span>
       <h2 class="sec-title">Crafted for the way you cook</h2>
       <div class="sec-rule"></div>
     </div>
@@ -811,8 +825,8 @@
   <div class="container">
     <div class="sec-head fade">
       <span class="eyebrow">Easy Ordering</span>
-      <h2 class="sec-title">How to Order ROTI EASE</h2>
-      <p class="sec-sub">Easy steps to get your ROTIEASE Silicone Mat at your doorstep!</p>
+      <h2 class="sec-title">How to Order ROTI EASE<sup class="tm-mark">™</sup></h2>
+      <p class="sec-sub">Easy steps to get your ROTI EASE<sup class="tm-mark">™</sup> Silicone Mat at your doorstep!</p>
       <div class="sec-rule"></div>
     </div>
     <div class="order-channel fade d1">
@@ -862,7 +876,7 @@
       <span class="eyebrow" style="display:block;text-align:center">Our Story</span>
       <h2 class="sec-title">Cooking brings<br>people together.</h2>
       <div class="sec-rule"></div>
-      <p style="margin-top:28px">At Rolliokitchen, we create thoughtfully designed kitchen essentials that make everyday Indian cooking cleaner, easier, and more enjoyable.</p>
+      <p style="margin-top:28px">At Rolliokitchen<sup class="tm-mark">™</sup>, we create thoughtfully designed kitchen essentials that make everyday Indian cooking cleaner, easier, and more enjoyable.</p>
       <p>Our products are crafted to support the moments that happen around the kitchen table.</p>
       <div class="about-btns">
         <a href="https://www.amazon.in/gp/product/B0H49NRR3V/ref=cx_skuctr_share?smid=A1RUQA1NM49FOQ" class="btn btn-amazon" target="_blank" rel="noopener"><svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="flex-shrink:0"><circle cx="9" cy="21" r="1"/><circle cx="20" cy="21" r="1"/><path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"/></svg>Buy on Amazon</a>
@@ -886,7 +900,7 @@
     <div class="origin-divider"></div>
     <div class="origin-text">
       <h2>Proudly made in India.</h2>
-      <p>Designed for traditional and modern kitchens. Perfect for the way Indian families cook every day. Marketed by Rollio Kitchen — Nayaka Enterprises.</p>
+      <p>Designed for traditional and modern kitchens. Perfect for the way Indian families cook every day. Marketed by Rollio Kitchen<sup class="tm-mark">™</sup> — Nayaka Enterprises.</p>
     </div>
   </div>
 </section>
@@ -895,7 +909,7 @@
 <footer>
   <div class="footer-grid">
     <div class="footer-brand">
-      <h3>Rolliokitchen</h3>
+      <h3>Rolliokitchen<sup class="tm-mark">™</sup></h3>
     </div>
     <div class="footer-col">
       <h4>Customer Services</h4>
@@ -927,7 +941,7 @@
     </div>
   </div>
   <div class="footer-bottom">
-    <p>© 2025 ROTI EASE — Marketed by Rollio Kitchen, Nayaka Enterprises. All rights reserved.</p>
+    <p>© 2025 ROTI EASE<sup class="tm-mark">™</sup> — Marketed by Rollio Kitchen<sup class="tm-mark">™</sup>, Nayaka Enterprises. All rights reserved.</p>
     <p>Made in India.</p>
   </div>
 </footer>
