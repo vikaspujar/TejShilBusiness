@@ -109,10 +109,7 @@
     .nav-logo {
       font-family: 'Cormorant Garamond', Georgia, serif; font-size: 48px; font-weight: 600;
       font-style: italic; color: #fff; letter-spacing: 0.03em; transition: color 0.4s;
-      display: flex; flex-direction: column; align-items: flex-start; gap: 1px; line-height: 1;
-    }
-    .nav-logo-spoon {
-      display: block; margin-left: 0; /* spans full brand name width */
+      line-height: 1;
     }
     .tm-mark {
       font-size: max(9px, 0.55em); vertical-align: super; font-style: normal;
@@ -163,7 +160,7 @@
     .hero-eyebrow {
       font-family: var(--serif); font-size: clamp(20px, 3.5vw, 48px);
       font-weight: 400; line-height: 1.1; letter-spacing: -0.02em; text-transform: none;
-      color: #fff; margin-bottom: 20px;
+      color: #fff; margin-bottom: 8px;
       opacity: 0; transform: translateY(14px); transition: all 0.8s var(--ease) 0.2s;
     }
     .hero-content h1 {
@@ -178,7 +175,7 @@
     }
     .hero-subbrand {
       font-size: 13px; font-weight: 400; letter-spacing: 0.08em;
-      color: rgba(255,255,255,0.7); margin-bottom: 22px;
+      color: rgba(255,255,255,0.7); margin-top: 20px; margin-bottom: 22px;
       opacity: 0; transform: translateY(14px); transition: all 0.8s var(--ease) 0.43s;
     }
     .hero-btns {
@@ -553,7 +550,6 @@
     @media (max-width: 900px) {
       #nav, #nav.scrolled { padding: 14px 20px; }
       .nav-links { display: none; }
-      .hero-eyebrow { margin-bottom: 32px; } /* more space between ROTIEASE and by Rolliokitchen on mobile */
       .feat-grid { grid-template-columns: 1fr; }
       #features { padding: 28px 0; }
       .feat-card { padding: 24px 20px; }
@@ -569,8 +565,6 @@
       .prod-details-grid { grid-template-columns: 140px 1fr; }
     }
     @media (max-width: 480px) {
-      .hero-eyebrow { margin-bottom: 48px; } /* more breathing room between ROTIEASE and by Rolliokitchen */
-      .hero-subbrand { padding-top: 12px; }
       .hero-content h1 { font-size: 34px; }
       .hero-btns { flex-direction: column; align-items: center; }
       .about-btns { flex-direction: column; align-items: flex-start; }
@@ -583,10 +577,6 @@
 <!-- ═══ NAV ═══ -->
 <nav id="nav">
   <a href="#" class="nav-logo">
-    <svg class="nav-logo-spoon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 28" width="300" height="20" aria-hidden="true">
-      <path d="M0 24 C100 24 220 22 268 12" stroke="#8B6010" stroke-width="2.5" stroke-linecap="round" fill="none"/>
-      <ellipse cx="281" cy="8" rx="14" ry="10" fill="#C4903A"/>
-    </svg>
     <span>Rolliokitchen<sup class="tm-mark">™</sup></span>
   </a>
   <ul class="nav-links">
@@ -603,7 +593,7 @@
   <div class="hero-overlay"></div>
   <div class="hero-content">
     <span class="hero-eyebrow">ROTIEASE<sup class="tm-mark">™</sup></span>
-    <p class="hero-subbrand">by Rolliokitchen<sup class="tm-mark">™</sup> · Made in India</p>
+    <p class="hero-subbrand">by Rolliokitchen<sup class="tm-mark">™</sup><br>Made in India</p>
     <h1>Roll perfect rotis<br>Every single time</h1>
     <p class="hero-p">Premium 100% food-grade silicone rolling mat — non-stick, BPA free, Teflon free. Designed for everyday Indian cooking.</p>
     <div class="hero-btns">
